@@ -1,8 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\public",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\components",
+    "\\src\\router",
+    "\\src\\store",
+    "\\src\\views"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\jsconfig.json",
   "PreviewInSolutionExplorer": false
 }
