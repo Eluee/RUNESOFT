@@ -4,7 +4,10 @@
     <router-link to="/about">About</router-link>
   </nav>
   <router-view />
-  <p>test6</p>
+
+  <p>lbj</p>
+  <p>test34</p>
+
 </template>
 
 <style>
