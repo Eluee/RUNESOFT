@@ -5,7 +5,7 @@
   </nav>
   <router-view />
 
-  <p>main</p>
+  <p>main2</p>
   <p>test34</p>
 
 </template>
