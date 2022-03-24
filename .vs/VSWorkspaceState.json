@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\src"
+    "\\src",
+    "\\src\\assets",
+    "\\src\\components",
+    "\\src\\views"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\package-lock.json",
   "PreviewInSolutionExplorer": false
 }
