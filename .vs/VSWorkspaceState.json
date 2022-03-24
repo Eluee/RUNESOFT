@@ -2,11 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\src",
-    "\\src\\components",
-    "\\src\\router",
-    "\\src\\store",
-    "\\src\\views"
+    "\\src"
   ],
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }
