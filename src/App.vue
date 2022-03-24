@@ -4,6 +4,7 @@
     <router-link to="/about">About</router-link>
   </nav>
   <router-view />
+  <p>new branch for local Eluee pc</p>
 </template>
 
 <style>
