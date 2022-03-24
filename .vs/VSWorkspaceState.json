@@ -3,12 +3,10 @@
     "",
     "\\public",
     "\\src",
-    "\\src\\assets",
     "\\src\\components",
     "\\src\\router",
     "\\src\\store",
     "\\src\\views"
   ],
-  "SelectedNode": "\\jsconfig.json",
   "PreviewInSolutionExplorer": false
 }
