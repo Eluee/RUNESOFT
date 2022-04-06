@@ -10,9 +10,14 @@
       <router-link to="/community">COMMUNITY</router-link>
     </nav>
   </div>
+  
   <div class="bannerimg">
-    <img src="@\assets\banner\TopBanner_1.png" />
+    <img src="@\assets\banner\TopBanner_1.png" /> 
+    <div class="bannertext">
+      <p>안녕하세요.<br />룬 소프트애 오신 것을 환영합니다.</p>
+    </div>
   </div>
+ 
   <router-view />
 </template>
 
