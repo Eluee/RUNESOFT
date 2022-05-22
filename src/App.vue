@@ -10,14 +10,6 @@
       <router-link to="/community">COMMUNITY</router-link>
     </nav>
   </div>
-
-  <div class="bannerimg">
-    <img src="@\assets\banner\TopBanner_1.png" />
-    <div class="bannertext">
-      <p>안녕하세요.<br />룬 소프트애 오신 것을 환영합니다.</p>
-    </div>
-  </div>
-
   <router-view />
 </template>
 
@@ -25,16 +17,6 @@
 .navber {
   position: relative;
   z-index: 2;
-}
-
-.bannerimg {
-  position: relative;
-  z-index: 1;
-  top: -79px;
-}
-
-.bannerimg img {
-  height: 500px;
 }
 
 #app {
@@ -72,7 +54,7 @@ nav a.router-link-exact-active {
 }
 
 .topbar a {
-  padding-left: 60px;
+  padding-left: 30px;
   padding-top: 2px;
 
   font-family: "Paytone One";
