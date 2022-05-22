@@ -5,76 +5,81 @@
   <div class="project_1">
     <img src="@/assets/banner/project1.jpg" />
   </div>
+
   <div class="project_2">
     <img src="@/assets/banner/project2.jpg" />
+    <!-- 각 클래스 별 구별되는 줄 -->
+    <div class="position_p2">
+      <div class="n_project">
+        <img src="@/assets/banner/Nproject.jpg" />
+        <div class="n_project_text">
+          <p>새 <br />프로젝트</p>
+        </div>
+        <div class="n_project_text2">
+          <p>{{ np_num }}개</p>
+        </div>
+      </div>
+      <!-- 각 클래스 별 구별되는 줄 -->
+      <div class="c_project">
+        <img src="@/assets/banner/cproject.jpg" />
+        <div class="c_project_text">
+          <p>완성 프로젝트</p>
+        </div>
+        <div class="c_project_text2">
+          <p>{{ cp_num }}개</p>
+        </div>
+      </div>
+      <!-- 각 클래스 별 구별되는 줄 -->
+      <div class="r_project">
+        <img src="@/assets/banner/rproject.jpg" />
+        <div class="r_project_text">
+          <p>계획중인 프로젝트</p>
+        </div>
+        <div class="r_project_text2">
+          <p>{{ rp_num }}개</p>
+        </div>
+      </div>
+      <!-- 각 클래스 별 구별되는 줄 -->
+      <div class="search">
+        <div class="search_box"></div>
+        <div class="search_text">
+          <p>⌕</p>
+        </div>
+      </div>
+    </div>
   </div>
+
   <div class="project_3">
-    <img src="@/assets/banner/project3.jpg" />
-  </div>
-  <!-- 각 클래스 별 구별되는 줄 -->
-  <div class="n_project">
-    <img src="@/assets/banner/Nproject.jpg" />
-    <div class="n_project_text">
-      <p>새 <br />프로젝트</p>
-    </div>
-    <div class="p_rectangle">
-      <p>{{ np_num }}개</p>
-    </div>
-  </div>
-  <!-- 각 클래스 별 구별되는 줄 -->
-  <div class="c_project">
-    <img src="@/assets/banner/cproject.jpg" />
-    <div class="c_project_text">
-      <p>완성 프로젝트</p>
-    </div>
-    <div class="c_project_text2">
-      <p>{{ cp_num }}개</p>
-    </div>
-  </div>
-  <!-- 각 클래스 별 구별되는 줄 -->
-  <div class="r_project">
-    <img src="@/assets/banner/rproject.jpg" />
-    <div class="r_project_text">
-      <p>계획중인 프로젝트</p>
-    </div>
-    <div class="r_project_text2">
-      <p>{{ rp_num }}개</p>
-    </div>
-  </div>
-  <!-- 각 클래스 별 구별되는 줄 -->
-  <div class="search">
-    <div class="search_box"></div>
-    <div class="search_text">
-      <p>⌕</p>
-    </div>
-  </div>
-  <div class="project_name">
-    <div class="project_name_text"></div>
-    <h1>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;프로젝트 명</h1>
-    <p>
-      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;프로젝트 설명
-    </p>
-    <img src="@/assets/banner/projectname.jpg" />
-    <div class="line"></div>
-    <div class="d_t_name">
-      <h1>
-        개발자 &emsp;&emsp;&emsp;&emsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 개발도구
-      </h1>
-    </div>
-    <div class="d_name">
-      <p>정성화 &nbsp; 이병준 &nbsp; 김태호</p>
-    </div>
-    <div class="f_img">
-      <img src="@/assets/banner/face.jpg" />
-    </div>
-    <div class="f_img2">
-      <img src="@/assets/banner/face.jpg" />
-    </div>
-    <div class="f_img3">
-      <img src="@/assets/banner/face.jpg" />
-    </div>
-    <div class="v_img">
-      <img src="@/assets/banner/vue.png" />
+    <div class="project_name">
+      <div class="project_name_text">
+        <h1>프로젝트 명</h1>
+      </div>
+      <div class="project_explain_text">
+        <p>프로젝트 설명</p>
+      </div>
+      <img src="@/assets/banner/projectname.jpg" />
+      <div class="line"></div>
+      <div class="d_t_name">
+        <h1>개발자</h1>
+      </div>
+      <div class="d_t_name2">
+        <h1>개발 도구</h1>
+      </div>
+      <div class="d_name">
+        <p>정성화 &nbsp; 이병준 &nbsp; 김태호</p>
+      </div>
+      <div class="f_img">
+        <img src="@/assets/banner/face.jpg" />
+      </div>
+      <div class="f_img2">
+        <img src="@/assets/banner/face.jpg" />
+      </div>
+      <div class="f_img3">
+        <img src="@/assets/banner/face.jpg" />
+      </div>
+      <div class="v_img">
+        <img src="@/assets/banner/vue.png" />
+      </div>
     </div>
   </div>
 </template>
@@ -83,37 +88,29 @@
 .project_1 {
   position: relative;
   z-index: 1;
-  top: -710px;
 }
 .project_1 img {
   width: 95%;
+  height: 472px;
 }
 .project_2 {
   position: relative;
   z-index: 1;
-  top: -710px;
 }
 .project_2 img {
   width: 95%;
-  height: 600px;
+  height: 472px;
 }
-.project_3 {
-  position: relative;
-  z-index: 1;
-  top: -710px;
-}
-.project_3 img {
-  width: 95%;
-}
+
 .n_project {
-  position: relative;
-  top: -1900px;
-  z-index: 1;
+  position: absolute;
+  z-index: 2;
   background-color: aliceblue;
   width: 300px;
   height: 290px;
-  left: 31%;
+  left: 392px;
   border-top-left-radius: 50px;
+  top: 50px;
 }
 .n_project img {
   height: 230px;
@@ -129,44 +126,45 @@
   text-align: left;
   z-index: 1;
 }
-.p_rectangle {
+.n_project_text2 {
   position: absolute;
   color: black;
   font-size: 30px;
-  z-index: 1;
+  z-index: 2;
   right: 3%;
   top: 75%;
 }
 .c_project {
-  position: relative;
-  top: -2210px;
-  z-index: 1;
-  left: 13%;
+  position: absolute;
+  z-index: 2;
+  left: 700px;
+  top: 50px;
 }
 .c_project img {
   width: 200px;
   height: 145px;
   border-top-right-radius: 50px;
 }
+
 .c_project_text {
   position: absolute;
+  transform: translate(50%, -50%);
   color: aliceblue;
-  top: 45px;
-  left: 46%;
+  top: 50%;
   z-index: 1;
 }
 .c_project_text2 {
   position: absolute;
   color: aliceblue;
-  top: 100px;
-  left: 55%;
+  top: 70%;
+  left: 85%;
   z-index: 1;
 }
 .r_project {
-  position: relative;
-  top: -2230px;
-  z-index: 1;
-  left: 13%;
+  position: absolute;
+  z-index: 2;
+  left: 700px;
+  top: 200px;
 }
 .r_project img {
   width: 200px;
@@ -175,22 +173,22 @@
 .r_project_text {
   position: absolute;
   color: aliceblue;
-  top: 45px;
-  left: 45%;
+  transform: translate(27%, -50%);
+  top: 50%;
   z-index: 1;
 }
 .r_project_text2 {
   position: absolute;
   color: aliceblue;
-  top: 100px;
-  left: 55%;
+  top: 70%;
+  left: 85%;
   z-index: 1;
 }
 .search {
-  top: 890px;
-  z-index: 1;
-  left: 31%;
   position: absolute;
+  z-index: 2;
+  top: 345px;
+  left: 391px;
 }
 .search_box {
   background-color: aliceblue;
@@ -204,56 +202,69 @@
   font-size: 60px;
   z-index: 1;
   left: 47%;
-  top: -70px;
+  top: -100%;
 }
-.project_name img {
-  position: relative;
-  width: 575px;
-  height: 467px;
-  left: -24%;
-  top: -21.7%;
-}
+
 .project_name {
   background-color: aliceblue;
-  width: 1100px;
-  height: 467px;
+  width: 95%;
+  height: 547px;
   position: relative;
   z-index: 1;
-  left: 6%;
-  top: -1960px;
+}
+.project_name img {
+  position: absolute;
+  width: 675px;
+  height: 547px;
+  left: 0px;
+  top: 0px;
 }
 .project_name_text {
-  position: relative;
+  position: absolute;
   z-index: 1;
+  top: 0px;
+  left: 700px;
+}
+.project_explain_text {
+  position: absolute;
+  z-index: 1;
+  top: 70px;
+  left: 710px;
 }
 .d_t_name {
-  position: relative;
+  position: absolute;
   z-index: 1;
-  top: -300px;
-  left: 25%;
+  left: 710px;
+  top: 290px;
+}
+.d_t_name2 {
+  position: absolute;
+  z-index: 1;
+  left: 1050px;
+  top: 290px;
 }
 .d_name {
   position: relative;
   z-index: 1;
-  top: -230px;
-  left: 13%;
+  left: 132px;
+  top: 430px;
 }
 .line {
-  position: relative;
+  position: absolute;
   z-index: 1;
-  width: 480px;
+  width: 605px;
   height: 1px;
   background-color: #cccccc;
-  top: -300px;
-  left: 54%;
+  left: 705px;
+  top: 300px;
 }
 .f_img img {
   position: absolute;
   z-index: 1;
   width: 50px;
   height: 50px;
-  left: 55%;
-  top: 361px;
+  left: 720px;
+  top: 370px;
   border-radius: 25px;
 }
 .f_img2 img {
@@ -261,8 +272,8 @@
   z-index: 1;
   width: 50px;
   height: 50px;
-  left: 61%;
-  top: 361px;
+  left: 783px;
+  top: 370px;
   border-radius: 25px;
 }
 .f_img3 img {
@@ -270,8 +281,8 @@
   z-index: 1;
   width: 50px;
   height: 50px;
-  left: 67%;
-  top: 361px;
+  left: 850px;
+  top: 370px;
   border-radius: 25px;
 }
 .v_img img {
@@ -279,8 +290,8 @@
   z-index: 1;
   width: 50px;
   height: 50px;
-  left: 83.5%;
-  top: 361px;
+  left: 1050px;
+  top: 370px;
 }
 </style>
 

@@ -12,7 +12,6 @@
   </div>
 
   <div class="bannerimg">
-    <img src="@\assets\banner\TopBanner_1.png" />
     <div class="bannertext">
       <p>안녕하세요.<br />룬 소프트애 오신 것을 환영합니다.</p>
     </div>
@@ -31,10 +30,6 @@
   position: relative;
   z-index: 1;
   top: -79px;
-}
-
-.bannerimg img {
-  height: 500px;
 }
 
 #app {
