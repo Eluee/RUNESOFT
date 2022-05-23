@@ -211,6 +211,7 @@
   height: 547px;
   position: relative;
   z-index: 1;
+  left: 30px;
 }
 .project_name img {
   position: absolute;
@@ -246,13 +247,13 @@
 .d_name {
   position: relative;
   z-index: 1;
-  left: 132px;
+  left: 207px;
   top: 430px;
 }
 .line {
   position: absolute;
   z-index: 1;
-  width: 605px;
+  width: 480px;
   height: 1px;
   background-color: #cccccc;
   left: 705px;
