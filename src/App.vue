@@ -1,6 +1,7 @@
 <template>
   <div class="topbar">
     <a>Rune Soft</a>
+    <img src="@/components/icon/menu.svg" />
   </div>
   <div class="navber">
     <nav>
@@ -27,7 +28,7 @@
 }
 
 nav {
-  padding-top: 33px;
+  padding-top: 66px;
 }
 
 nav a {
@@ -46,6 +47,7 @@ nav a.router-link-exact-active {
 }
 
 .topbar {
+  position: absolute;
   width: 100%;
   height: 30px;
   left: 0px;
@@ -54,14 +56,19 @@ nav a.router-link-exact-active {
 }
 
 .topbar a {
-  padding-left: 30px;
-  padding-top: 2px;
-
+  position: absolute;
+  top: 50%;
+  left: 10px;
   font-family: "Paytone One";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 25px;
   color: #333333;
+}
+
+.topbar img {
+  position: absolute;
+  top: 50%;
+  right: 10px;
 }
 </style>
