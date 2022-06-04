@@ -8,7 +8,7 @@
   <div class="contents">
     <p class="contents_head_1">소규모로 구성된 팀</p>
     <p class="contents_text">룬 소프트는 대학생들로 모인 소규모 팀입니다.</p>
-    <div class="user_icon">
+    <div id="user_ct">
       <img class="user_1" src="@/components/icon/user.svg" />
       <img class="user_2" src="@/components/icon/user.svg" />
       <img class="user_3" src="@/components/icon/user.svg" />
@@ -41,7 +41,7 @@
 }
 
 .bannerimg {
-  position: absolute;
+  position: relative;
   margin-top: -70px;
   padding: 150px;
   background-image: url(../../src/assets/banner/TopBanner_1.png);
@@ -59,11 +59,9 @@
 }
 
 .contents {
-  position: absolute;
-  top: 750px;
-  text-align: center;
-  left: 10%;
-  right: 10%;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .contents_head_1 {
@@ -86,10 +84,11 @@
   color: #999999;
 }
 
-.user_icon {
-  position: absolute;
-  left: 0%;
-  right: 0%;
+#user_ct {
+  position: relative;
+  width: 800px;
+  height: 300px;
+  display: inline-block;
 }
 
 .user_1 {

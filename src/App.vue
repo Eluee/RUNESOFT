@@ -12,6 +12,22 @@
     </nav>
   </div>
   <router-view />
+  <footer>
+    <div id="footer_1_ct">
+      <div id="footer_1_1_ct">
+        <p class="footer_1_1_text">팀소개</p>
+        <img src="@/components/icon/footer_bar_icon.svg" />
+        <p class="footer_1_1_text">이용약관</p>
+        <img src="@/components/icon/footer_bar_icon.svg" />
+        <p class="footer_1_1_text">개인정보처리방침</p>
+        <img src="@/components/icon/footer_bar_icon.svg" />
+        <p class="footer_1_1_text">전화문의</p>
+      </div>
+    </div>
+    <div id="footer_2_ct">
+      <h id="footer_text">ⓣ RUNESOFT, TEAM</h>
+    </div>
+  </footer>
 </template>
 
 <style>
@@ -25,6 +41,43 @@
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   text-align: center;
+}
+
+#footer_1_ct {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  border-bottom: 1px solid #666666;
+}
+
+#footer_1_1_ct {
+  position: relative;
+  left: 100px;
+  top: -5px;
+  display: flex;
+}
+
+.footer_1_1_text {
+  color: #d9d9d9;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#footer_2_ct {
+  width: 100%;
+  background-color: black;
+  height: 70px;
+}
+
+#footer_text {
+  position: relative;
+  top: 35%;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #555555;
 }
 
 nav {
