@@ -173,8 +173,8 @@
 .r_project_text {
   position: absolute;
   color: aliceblue;
-  transform: translate(27%, -50%);
-  top: 50%;
+  transform: translate(27%, -150%);
+
   z-index: 1;
 }
 .r_project_text2 {
