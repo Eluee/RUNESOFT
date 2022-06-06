@@ -1,15 +1,18 @@
 <template>
-  <div class="project">
-    <h1>This is an Project page</h1>
-  </div>
   <div class="project_1">
-    <img src="@/assets/banner/project1.jpg" />
+    <div class="project_text">
+      <h1>프로젝트를 <br />소개합니다.</h1>
+    </div>
+    <div class="project_text2">
+      <p>룬소프트의 최신 프로젝트를 <br />지금 바로 확인해보세요</p>
+    </div>
+    <div class="project_img1">
+      <img src="@/assets/banner/project1.jpg" />
+    </div>
   </div>
 
   <div class="project_2">
-    <img src="@/assets/banner/project2.jpg" />
-    <!-- 각 클래스 별 구별되는 줄 -->
-    <div class="position_p2">
+    <div class="position_box">
       <div class="n_project">
         <img src="@/assets/banner/Nproject.jpg" />
         <div class="n_project_text">
@@ -19,7 +22,7 @@
           <p>{{ np_num }}개</p>
         </div>
       </div>
-      <!-- 각 클래스 별 구별되는 줄 -->
+
       <div class="c_project">
         <img src="@/assets/banner/cproject.jpg" />
         <div class="c_project_text">
@@ -29,7 +32,7 @@
           <p>{{ cp_num }}개</p>
         </div>
       </div>
-      <!-- 각 클래스 별 구별되는 줄 -->
+
       <div class="r_project">
         <img src="@/assets/banner/rproject.jpg" />
         <div class="r_project_text">
@@ -39,7 +42,7 @@
           <p>{{ rp_num }}개</p>
         </div>
       </div>
-      <!-- 각 클래스 별 구별되는 줄 -->
+
       <div class="search">
         <div class="search_box"></div>
         <div class="search_text">
@@ -48,7 +51,6 @@
       </div>
     </div>
   </div>
-
   <div class="project_3">
     <div class="project_name">
       <div class="project_name_text">
@@ -88,29 +90,60 @@
 .project_1 {
   position: relative;
   z-index: 1;
+  background-color: gray;
+  width: 1440px;
+  height: 350px;
+  margin-top: -45px;
 }
-.project_1 img {
-  width: 95%;
-  height: 472px;
+.project_text {
+  left: 200px;
+  top: 20px;
+  position: absolute;
+  z-index: 1;
+  color: black;
+  font-size: 27px;
+}
+.project_text2 {
+  left: 200px;
+  top: 220px;
+  color: black;
+  position: absolute;
+  z-index: 1;
+}
+
+.project_img1 {
+  position: absolute;
+  z-index: 1;
+  width: 429px;
+  height: 268px;
+  top: 50px;
+  left: 850px;
 }
 .project_2 {
   position: relative;
+  z-index: 2;
+  width: 1440px;
+  height: 460px;
+  background-color: cadetblue;
+}
+.position_box {
+  position: absolute;
   z-index: 1;
+  width: 550px;
+  height: 400px;
+  background-color: bisque;
+  top: 30px;
+  left: 400px;
 }
-.project_2 img {
-  width: 95%;
-  height: 472px;
-}
-
 .n_project {
   position: absolute;
   z-index: 2;
   background-color: aliceblue;
   width: 300px;
   height: 290px;
-  left: 392px;
+  left: 20px;
   border-top-left-radius: 50px;
-  top: 50px;
+  top: 20px;
 }
 .n_project img {
   height: 230px;
@@ -137,8 +170,8 @@
 .c_project {
   position: absolute;
   z-index: 2;
-  left: 700px;
-  top: 50px;
+  left: 325px;
+  top: 20px;
 }
 .c_project img {
   width: 200px;
@@ -163,8 +196,8 @@
 .r_project {
   position: absolute;
   z-index: 2;
-  left: 700px;
-  top: 200px;
+  left: 325px;
+  top: 170px;
 }
 .r_project img {
   width: 200px;
@@ -187,8 +220,8 @@
 .search {
   position: absolute;
   z-index: 2;
-  top: 345px;
-  left: 391px;
+  top: 315px;
+  left: 20px;
 }
 .search_box {
   background-color: aliceblue;
@@ -207,11 +240,10 @@
 
 .project_name {
   background-color: aliceblue;
-  width: 95%;
+  width: 1440px;
   height: 547px;
   position: relative;
   z-index: 1;
-  left: 30px;
 }
 .project_name img {
   position: absolute;
@@ -247,7 +279,7 @@
 .d_name {
   position: relative;
   z-index: 1;
-  left: 207px;
+  left: 87px;
   top: 430px;
 }
 .line {
