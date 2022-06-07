@@ -20,8 +20,10 @@
 
 <style scoped>
 .icon {
+  position: relative;
+  top: 25%;
   border-width: 1px;
-  border-color: lightslategray;
+  border-color: white;
   border-style: solid;
   width: 150px;
   height: 150px;
@@ -31,31 +33,34 @@
 .right-arrow {
   position: absolute;
   right: 10%;
-  top: 50%;
+  top: 45%;
 }
 
 .left-arrow {
   position: absolute;
   left: 10%;
-  top: 50%;
+  top: 45%;
 }
 
 .bannerimg {
   position: relative;
-  margin-top: -70px;
-  padding: 150px;
-  background-image: url(../../src/assets/banner/TopBanner_1.png);
-  right: 0%;
-  left: 0%;
+  left: 50%;
+  margin-top: -52px;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.49);
+  width: 1200px;
+  height: 600px;
 }
 
 .bannerimg p {
+  position: relative;
   color: white;
   font-family: "Noto Sans";
   font-style: normal;
+  top: 25%;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 56px;
+  font-size: 35px;
+  line-height: 40px;
 }
 
 .contents {

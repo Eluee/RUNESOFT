@@ -129,7 +129,7 @@
 }
 
 .navber nav {
-  padding-top: 66px;
+  padding-top: 25px;
 }
 
 .navber nav a {
@@ -148,17 +148,18 @@
 }
 
 .topbar {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 30px;
+  height: 40px;
   left: 0px;
   top: 0px;
   text-align: left;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .topbar a {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 10px;
   font-family: "Paytone One";
   font-style: normal;
@@ -169,7 +170,7 @@
 
 .topbar img {
   position: absolute;
-  top: 50%;
+  top: 25%;
   right: 10px;
 }
 </style>
