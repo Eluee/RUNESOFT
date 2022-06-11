@@ -2,8 +2,38 @@
   <div class="bannerimg">
     <div class="icon"></div>
     <p>안녕하세요.<br />룬 소프트에 오신 것을 환영합니다.</p>
-    <img class="right-arrow" src="@/components/icon/rightArrow.svg" />
-    <img class="left-arrow" src="@/components/icon/leftArrow.svg" />
+    <svg
+      class="right-arrow"
+      width="27"
+      height="50"
+      viewBox="0 0 32 61"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 59L30 29.5L0 0"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <svg
+      class="left-arrow"
+      width="27"
+      height="50"
+      viewBox="0 0 32 61"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M30 59L0 29.5L30 0"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
   </div>
   <div class="contents">
     <p class="contents_head_1">소규모로 구성된 팀</p>
@@ -34,6 +64,10 @@
   position: absolute;
   right: 10%;
   top: 45%;
+}
+
+.right-arrow:hover > path {
+  stroke: firebrick;
 }
 
 .left-arrow {
