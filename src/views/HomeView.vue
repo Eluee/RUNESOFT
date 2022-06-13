@@ -4,9 +4,9 @@
     <p>안녕하세요.<br />룬 소프트에 오신 것을 환영합니다.</p>
     <svg
       class="right-arrow"
-      width="27"
-      height="50"
-      viewBox="0 0 32 61"
+      width="70"
+      height="70"
+      viewBox="-10 -10 95 70 "
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -20,9 +20,9 @@
     </svg>
     <svg
       class="left-arrow"
-      width="27"
-      height="50"
-      viewBox="0 0 32 61"
+      width="70"
+      height="70"
+      viewBox="0 0 95 70"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -63,17 +63,35 @@
 .right-arrow {
   position: absolute;
   right: 10%;
-  top: 45%;
+  top: 53.7%;
 }
 
-.right-arrow:hover > path {
-  stroke: firebrick;
+.right-arrow {
+  stroke: white;
+  transition: all 0.5s;
+}
+
+.right-arrow:hover {
+  transform: translateX(25px);
+  transition: all 0.5s;
+  transition-timing-function: ease;
 }
 
 .left-arrow {
   position: absolute;
-  left: 10%;
-  top: 45%;
+  left: 13.4%;
+  top: 55%;
+}
+
+.left-arrow {
+  stroke: white;
+  transition: all 0.5s;
+}
+
+.left-arrow:hover {
+  transform: translateX(-25px);
+  transition: all 0.5s;
+  transition-timing-function: ease;
 }
 
 .bannerimg {
