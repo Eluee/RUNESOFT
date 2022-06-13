@@ -2,8 +2,38 @@
   <div class="bannerimg">
     <div class="icon"></div>
     <p>안녕하세요.<br />룬 소프트에 오신 것을 환영합니다.</p>
-    <img class="right-arrow" src="@/components/icon/rightArrow.svg" />
-    <img class="left-arrow" src="@/components/icon/leftArrow.svg" />
+    <svg
+      class="right-arrow"
+      width="70"
+      height="70"
+      viewBox="-10 -10 95 70 "
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 59L30 29.5L0 0"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <svg
+      class="left-arrow"
+      width="70"
+      height="70"
+      viewBox="0 0 95 70"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M30 59L0 29.5L30 0"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
   </div>
   <div class="contents">
     <p class="contents_head_1">소규모로 구성된 팀</p>
@@ -20,8 +50,10 @@
 
 <style scoped>
 .icon {
+  position: relative;
+  top: 25%;
   border-width: 1px;
-  border-color: lightslategray;
+  border-color: white;
   border-style: solid;
   width: 150px;
   height: 150px;
@@ -31,31 +63,56 @@
 .right-arrow {
   position: absolute;
   right: 10%;
-  top: 50%;
+  top: 53.7%;
+}
+
+.right-arrow {
+  stroke: white;
+  transition: all 0.5s;
+}
+
+.right-arrow:hover {
+  transform: translateX(25px);
+  transition: all 0.5s;
+  transition-timing-function: ease;
 }
 
 .left-arrow {
   position: absolute;
-  left: 10%;
-  top: 50%;
+  left: 13.4%;
+  top: 55%;
+}
+
+.left-arrow {
+  stroke: white;
+  transition: all 0.5s;
+}
+
+.left-arrow:hover {
+  transform: translateX(-25px);
+  transition: all 0.5s;
+  transition-timing-function: ease;
 }
 
 .bannerimg {
   position: relative;
-  margin-top: -70px;
-  padding: 150px;
-  background-image: url(../../src/assets/banner/TopBanner_1.png);
-  right: 0%;
-  left: 0%;
+  left: 50%;
+  margin-top: -52px;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.49);
+  width: 1200px;
+  height: 600px;
 }
 
 .bannerimg p {
+  position: relative;
   color: white;
   font-family: "Noto Sans";
   font-style: normal;
+  top: 25%;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 56px;
+  font-size: 35px;
+  line-height: 40px;
 }
 
 .contents {
