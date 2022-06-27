@@ -90,7 +90,7 @@
 .project_1 {
   position: relative;
   z-index: 1;
-  background-color: gray;
+  background-color: #f0e8e8;
   width: 1440px;
   height: 350px;
   margin-top: -45px;
