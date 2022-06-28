@@ -44,11 +44,22 @@
       <img class="user_3" src="@/components/icon/user.svg" />
     </div>
   </div>
+  <div class="test">
+    <p>test</p>
+  </div>
 </template>
 
 <script></script>
 
 <style scoped>
+.test {
+  position: relative;
+  width: 1440px;
+  height: 500px;
+  background-color: red;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .icon {
   position: relative;
   top: 25%;
