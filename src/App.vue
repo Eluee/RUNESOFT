@@ -1,7 +1,7 @@
 <template>
   <div class="topbar">
-    <a>Rune Soft</a>
-    <img src="@/components/icon/menu.svg" />
+    <a>RUNE SOFT</a>
+    <img src="@/components/icon/users.svg" />
   </div>
   <div class="navber">
     <nav>
@@ -160,17 +160,20 @@
 .topbar a {
   position: absolute;
   top: 25%;
-  left: 10px;
-  font-family: "Paytone One";
+  left: 80px;
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  color: #333333;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  align-items: center;
+  text-align: center;
+  color: #9979c1;
 }
 
 .topbar img {
   position: absolute;
   top: 25%;
-  right: 10px;
+  left: 220px;
 }
 </style>
