@@ -3,10 +3,10 @@
     <a>RUNE SOFT</a>
     <img src="@/components/icon/users.svg" />
   </div>
-  <div class="navber">
-    <nav>
+  <div class="navbar">
+    <nav class="navbar_group">
       <router-link to="/">HOME</router-link>
-      <router-link to="/info">INFO</router-link>
+      <router-link to="/info" ref="infolink">INFO</router-link>
       <router-link to="/project">PROJECT</router-link>
       <router-link to="/community">COMMUNITY</router-link>
     </nav>
@@ -42,12 +42,17 @@
   </footer>
 </template>
 
-<style>
-.navber {
-  position: relative;
-  z-index: 2;
-}
+<script>
+export default {
+  mounted() {
+    this.$rafs.infolink.click(function () {
+      alert("hi");
+    });
+  },
+};
+</script>
 
+<style>
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -128,23 +133,36 @@
   color: #555555;
 }
 
-.navber nav {
-  padding-top: 25px;
+.navbar {
+  position: relative;
+  z-index: 2;
 }
 
-.navber nav a {
+.navbar nav {
+  position: relative;
+  height: 40px;
+}
+
+.navbar nav a {
+  position: relative;
+  top: 15%;
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
   color: #999999;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-decoration: none;
 }
 
-.navber nav a.router-link-exact-active {
+.navbar nav a.router-link-exact-active {
   color: rgb(255, 255, 255);
+}
+
+.navbar-group #infolink.router-link-exact-active {
+  background-color: black;
 }
 
 .topbar {
