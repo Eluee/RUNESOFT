@@ -98,14 +98,72 @@
   </div>
   <div id="devInfoBanner">
     <div id="devInfoTitle">
-      <div id="devInfoTitleTxt" style="color: #333333; font-size: 24px">
-        #개발자의말
+      <div id="devInfoTitleTxt">#개발자의말</div>
+    </div>
+    <div class="devGroup">
+      <div class="devImgAndName">
+        <div class="devImage">
+          <img src="@/assets/banner/JeongSeongHwa.png" />
+        </div>
+        <div class="devName">정성화</div>
+      </div>
+      <div class="devTalkBoxLeft">
+        <div class="devTalkTxt">
+          풀스택 개발자를 목표로 하며<br />
+          팀원들과 소통을 중요시하고 도전적으로 기획합니다.<br /><br />
+
+          올바른 목표와 구체적인 계획, 강력한 동기만 있다면<br />
+          어려운 문제에 마주했을때 냉정하게 풀어나갈 수 있으며,<br />
+          다양한 관점으로 문제를 바라볼 수 있도록<br />
+          팀원들과 소통하는 개발자입니다.
+        </div>
+        <div class="gitIcon"><img src="@/assets/banner/gitIcon.svg" /></div>
+        <a class="gitAccount" href="https://github.com/Eluee" target="_blank"
+          >https://github.com/Eluee</a
+        >
+      </div>
+    </div>
+    <div class="devGroup">
+      <div class="devImgAndName">
+        <div class="devImage">
+          <img src="@/assets/banner/LeeByeongJun.png" />
+        </div>
+        <div class="devName">이병준</div>
+      </div>
+      <div class="devTalkBoxLeft">
+        <div class="devTalkTxt">
+          가상현실 전문가를 꿈꾸며<br />가상 3D공간에 메타버스의 기능을 합쳐<br />
+          사람들이 넷 상에서도 교감을 나눌 수 있는 환경을<br />구축하는 것을
+          목표로 삶고 있습니다.<br /><br />가상현실이 대중화가 되고 사람들이<br />
+          가상공간에서 현실감을 더 느끼도록 만드는데<br />힘을 보태고 싶은
+          개발자 이병준입니다.
+        </div>
+        <div class="gitIcon"><img src="@/assets/banner/gitIcon.svg" /></div>
+        <a class="gitAccount" href="https://github.com/Lbj0820" target="_blank"
+          >https://github.com/Lbj0820</a
+        >
+      </div>
+    </div>
+    <div class="devGroup">
+      <div class="devImgAndName">
+        <div class="devImage">
+          <img src="@/assets/banner/KimTaeHo.png" />
+        </div>
+        <div class="devName">김태호</div>
+      </div>
+      <div class="devTalkBoxLeft">
+        <div class="devTalkTxt"></div>
+        <div class="gitIcon"><img src="@/assets/banner/gitIcon.svg" /></div>
+        <a class="gitAccount" href="https://github.com/kth7414" target="_blank"
+          >https://github.com/kth7414</a
+        >
       </div>
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap);
 #topBanner {
   width: 1440px;
   height: 300px;
@@ -116,7 +174,6 @@
   width: 960px;
   height: 300px;
   margin: 0 auto;
-  background-color: #ffffff;
 }
 #photosGroup ul {
   padding: 0px;
@@ -143,8 +200,9 @@
 
 #infoBanner {
   width: 1440px;
-  height: 2500px;
+  height: 2700px;
   margin: 0 auto;
+  overflow: auto;
 }
 .infoGroup {
   width: 700px;
@@ -190,6 +248,7 @@
   margin: 0 auto;
   background: url(@/assets/banner/devInfo.jpg);
   background-size: cover;
+  overflow: auto;
 }
 #devInfoTitle {
   background: border-box;
@@ -197,11 +256,63 @@
   width: 200px;
   border-radius: 25px;
   background-color: #d9d9d9;
-  margin: 0 auto;
+  margin: 60px auto;
 }
 #devInfoTitleTxt {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  font-size: 24px;
+  color: #333333;
+  font-weight: bold;
+}
+.devGroup {
+  margin: 50px 50px;
+  display: inline-block;
+  width: 490px;
+  height: 450px;
+}
+.devImgAndName {
+  position: relative;
+  display: flex;
+}
+.devImage {
+  display: inline-block;
+}
+.devName {
+  height: 30px;
+  margin-top: 40px;
+  display: inline-block;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: lighter;
+}
+.devTalkBoxLeft {
+  width: 485.5px;
+  height: 350px;
+  background-image: url(@/assets/banner/devTalkBox.png);
+  overflow: hidden;
+}
+.devTalkTxt {
+  text-align: left;
+  margin-top: 24px;
+  margin-left: 49px;
+  width: 470px;
+  height: 250px;
+  font-size: 16px;
+  color: #333333;
+}
+.gitIcon {
+  display: inline-block;
+  margin-top: 30px;
+}
+.gitAccount {
+  text-align: left;
+  margin-left: 16px;
+  display: inline-block;
+  width: 352px;
+  height: 26px;
+  text-decoration: none;
+  color: #999999;
 }
 </style>
