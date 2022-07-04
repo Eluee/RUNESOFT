@@ -6,7 +6,7 @@
   <div class="navbar">
     <nav class="navbar_group">
       <router-link to="/">HOME</router-link>
-      <router-link to="/info" ref="infolink">INFO</router-link>
+      <router-link to="/info">INFO</router-link>
       <router-link to="/project">PROJECT</router-link>
       <router-link to="/community">COMMUNITY</router-link>
     </nav>
@@ -43,13 +43,7 @@
 </template>
 
 <script>
-export default {
-  mounted() {
-    this.$rafs.infolink.click(function () {
-      alert("hi");
-    });
-  },
-};
+export default {};
 </script>
 
 <style>
@@ -168,7 +162,7 @@ export default {
 .topbar {
   position: relative;
   width: 100%;
-  height: 40px;
+  height: 50px;
   left: 0px;
   top: 0px;
   text-align: left;
@@ -177,7 +171,7 @@ export default {
 
 .topbar a {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 80px;
   font-family: "Roboto";
   font-style: normal;
@@ -191,7 +185,7 @@ export default {
 
 .topbar img {
   position: absolute;
-  top: 25%;
-  left: 220px;
+  top: 30%;
+  left: 200px;
 }
 </style>
