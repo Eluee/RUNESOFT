@@ -45,9 +45,18 @@
         <img class="user_3" src="@/components/icon/user.svg" />
       </div>
     </div>
-    <div class="test">
-      <p>test</p>
-      <p>test2</p>
+    <div class="contents2ct">
+      <div id="context2ct">
+        <p id="con2hdtext">만들 수 있지 않을까?</p>
+        <p id="con2extext">
+          새로운 가치를 만들기 위한 끊임없는 학습과 도전하는<br />
+          대학생들의 개발 첫 발자국
+        </p>
+      </div>
+      <img
+        src="@/assets/maincontents/mainpagecontents2.png"
+        id="contents2img"
+      />
     </div>
   </div>
 </template>
@@ -55,14 +64,7 @@
 <script></script>
 
 <style scoped>
-.test {
-  position: relative;
-  width: 1440px;
-  height: 500px;
-  background-color: red;
-  left: 50%;
-  transform: translateX(-50%);
-}
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap);
 .icon {
   position: relative;
   top: 25%;
@@ -73,41 +75,34 @@
   height: 150px;
   margin: auto;
 }
-
 .right-arrow {
   position: absolute;
   right: 10%;
   top: 53.7%;
 }
-
 .right-arrow {
   stroke: white;
   transition: all 0.5s;
 }
-
 .right-arrow:hover {
   transform: translateX(25px);
   transition: all 0.5s;
   transition-timing-function: ease;
 }
-
 .left-arrow {
   position: absolute;
   left: 13.4%;
   top: 55%;
 }
-
 .left-arrow {
   stroke: white;
   transition: all 0.5s;
 }
-
 .left-arrow:hover {
   transform: translateX(-25px);
   transition: all 0.5s;
   transition-timing-function: ease;
 }
-
 .bannerimg {
   position: relative;
   left: 50%;
@@ -117,7 +112,6 @@
   width: 1440px;
   height: 600px;
 }
-
 .bannerimg p {
   position: relative;
   color: white;
@@ -128,13 +122,11 @@
   font-size: 35px;
   line-height: 40px;
 }
-
 .contents {
   position: relative;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-
 .contents_head_1 {
   font-family: "Noto Sans";
   font-style: normal;
@@ -144,7 +136,6 @@
   margin-top: 0px;
   color: #333333;
 }
-
 .contents_text {
   font-family: "Noto Sans";
   font-style: normal;
@@ -154,29 +145,56 @@
   margin-top: -30px;
   color: #999999;
 }
-
 #user_ct {
   position: relative;
   width: 800px;
   height: 300px;
   display: inline-block;
 }
-
 .user_1 {
   position: absolute;
   left: calc(50% - 260px);
   transform: translate(-50%, 0);
 }
-
 .user_2 {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
 }
-
 .user_3 {
   position: absolute;
   left: calc(50% + 260px);
   transform: translate(-50%, 0);
+}
+.contents2ct {
+  position: relative;
+  width: 1440px;
+  height: 500px;
+  margin-top: 100px;
+}
+#contents2img {
+  position: absolute;
+  top: 30px;
+  width: 350px;
+  right: 70px;
+}
+#con2hdtext {
+  position: relative;
+  font-family: Noto Sans KR Font;
+  font-size: 50px;
+  margin: 0px;
+}
+#con2extext {
+  position: relative;
+  margin-top: 10px;
+  font-family: Noto Sans KR Font;
+}
+#context2ct {
+  position: absolute;
+  right: 450px;
+  top: 30px;
+  height: 400px;
+  width: 500px;
+  text-align: right;
 }
 </style>

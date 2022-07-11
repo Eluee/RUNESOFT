@@ -1,49 +1,58 @@
 <template>
-  <div class="topbar">
-    <a>RUNE SOFT</a>
-    <img src="@/components/icon/users.svg" />
-  </div>
-  <div class="navbar">
-    <nav class="navbar_group">
-      <router-link to="/">HOME</router-link>
-      <router-link to="/info">INFO</router-link>
-      <router-link to="/project">PROJECT</router-link>
-      <router-link to="/community">COMMUNITY</router-link>
-    </nav>
-  </div>
-  <router-view />
-  <footer>
-    <div id="footer_0_ct">
-      <nav>
-        <router-link to="/">메인홈</router-link>
-        <router-link to="/info">개발자정보</router-link>
-        <router-link to="/project">프로젝트</router-link>
-        <router-link to="/community">커뮤니티</router-link>
+  <div id="mainapp">
+    <div class="topbar">
+      <a>RUNE SOFT</a>
+      <img src="@/components/icon/users.svg" />
+      <p id="guestnum">{{ guest }}</p>
+    </div>
+    <div class="navbar">
+      <nav class="navbar_group">
+        <router-link to="/">HOME</router-link>
+        <router-link to="/info">INFO</router-link>
+        <router-link to="/project">PROJECT</router-link>
+        <router-link to="/community">COMMUNITY</router-link>
       </nav>
     </div>
-    <div id="footer_1_ct">
-      <div id="footer_1_1_ct">
-        <p class="footer_1_1_text">팀소개</p>
-        <img src="@/components/icon/footer_bar_icon.svg" />
-        <p class="footer_1_1_text">이용약관</p>
-        <img src="@/components/icon/footer_bar_icon.svg" />
-        <p class="footer_1_1_text">개인정보처리방침</p>
-        <img src="@/components/icon/footer_bar_icon.svg" />
-        <p class="footer_1_1_text">전화문의</p>
+    <router-view />
+    <footer>
+      <div id="footer_0_ct">
+        <nav>
+          <router-link to="/">메인홈</router-link>
+          <router-link to="/info">개발자정보</router-link>
+          <router-link to="/project">프로젝트</router-link>
+          <router-link to="/community">커뮤니티</router-link>
+        </nav>
       </div>
-      <div id="footer_1_2_ct">
-        <p>고객센터</p>
-        <img src="@/components/icon/inv_triangle.svg" />
+      <div id="footer_1_ct">
+        <div id="footer_1_1_ct">
+          <p class="footer_1_1_text">팀소개</p>
+          <img src="@/components/icon/footer_bar_icon.svg" />
+          <p class="footer_1_1_text">이용약관</p>
+          <img src="@/components/icon/footer_bar_icon.svg" />
+          <p class="footer_1_1_text">개인정보처리방침</p>
+          <img src="@/components/icon/footer_bar_icon.svg" />
+          <p class="footer_1_1_text">전화문의</p>
+        </div>
+        <div id="footer_1_2_ct">
+          <p>고객센터</p>
+          <img src="@/components/icon/inv_triangle.svg" />
+        </div>
       </div>
-    </div>
-    <div id="footer_2_ct">
-      <h id="footer_text">ⓣ RUNESOFT, TEAM</h>
-    </div>
-  </footer>
+      <div id="footer_2_ct">
+        <h id="footer_text">ⓣ RUNESOFT, TEAM</h>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      guest: 10,
+    };
+  },
+};
 </script>
 
 <style>
@@ -57,6 +66,7 @@ export default {};
 #footer_0_ct {
   width: 100%;
   height: 40px;
+  margin-top: 100px;
   border-top: 1px solid #d9d9d9;
 }
 
@@ -155,8 +165,14 @@ export default {};
   color: rgb(255, 255, 255);
 }
 
-.navbar-group #infolink.router-link-exact-active {
-  background-color: black;
+#guestnum {
+  position: absolute;
+  left: 230px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 20px;
+  color: #777777;
+  top: -5px;
 }
 
 .topbar {
