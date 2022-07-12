@@ -1,5 +1,6 @@
 <template>
-  <div id="mainapp">
+  <div id="mainapp" style="overflow-x: hidden">
+    <!--overflow-x: hidden 가로 공백 스크롤 숨기기-->
     <div class="topbar">
       <a>RUNE SOFT</a>
       <img src="@/components/icon/users.svg" />
@@ -97,27 +98,29 @@ export default {
 
 #footer_1_1_ct {
   position: absolute;
-  top: -5px;
   left: 100px;
+  top: 20%;
   display: inline-flex;
 }
 
 #footer_1_2_ct {
   position: absolute;
   right: 100px;
-  top: -5px;
+  top: 20%;
   display: inline-flex;
 }
 
 #footer_1_2_ct p {
   color: white;
   padding-right: 5px;
+  margin: 0 auto;
 }
 
 .footer_1_1_text {
   color: #d9d9d9;
   padding-left: 10px;
   padding-right: 10px;
+  margin: 0 auto;
 }
 
 #footer_2_ct {
@@ -140,11 +143,14 @@ export default {
 .navbar {
   position: relative;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .navbar nav {
   position: relative;
   height: 40px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .navbar nav a {
@@ -168,11 +174,12 @@ export default {
 #guestnum {
   position: absolute;
   left: 230px;
+  top: 11px;
   font-family: "Roboto";
   font-style: normal;
   font-size: 20px;
+
   color: #777777;
-  top: -5px;
 }
 
 .topbar {

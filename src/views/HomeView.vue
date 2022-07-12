@@ -45,10 +45,10 @@
         <img class="user_3" src="@/components/icon/user.svg" />
       </div>
     </div>
-    <div class="contents2ct">
+    <div class="contentsct">
       <div id="context2ct">
-        <p id="con2hdtext">만들 수 있지 않을까?</p>
-        <p id="con2extext">
+        <p class="conhdtext">가능할 것 같은데?</p>
+        <p class="conextext">
           새로운 가치를 만들기 위한 끊임없는 학습과 도전하는<br />
           대학생들의 개발 첫 발자국
         </p>
@@ -56,6 +56,26 @@
       <img
         src="@/assets/maincontents/mainpagecontents2.png"
         id="contents2img"
+      />
+    </div>
+    <div class="contentsct">
+      <div id="context3ct">
+        <p class="conhdtext">더 좋은 방법은 없을까?</p>
+        <p class="conextext">
+          우리는 더좋은 선택을 하기위해 비판과 사고를 멈추지 않습니다.
+        </p>
+      </div>
+      <img
+        src="@/assets/maincontents/mainpagecontents3.png"
+        id="contents3img"
+      />
+    </div>
+    <div class="contentsct">
+      <p class="conhdtext">우리의 비전을 향해!</p>
+      <p class="conextext">우리의 상상을 현실로</p>
+      <img
+        src="@/assets/maincontents/mainpagecontents4.png"
+        id="contents4img"
       />
     </div>
   </div>
@@ -73,7 +93,7 @@
   border-style: solid;
   width: 150px;
   height: 150px;
-  margin: auto;
+  margin: 0 auto;
 }
 .right-arrow {
   position: absolute;
@@ -106,7 +126,7 @@
 .bannerimg {
   position: relative;
   left: 50%;
-  margin-top: -41px;
+  margin-top: -57px;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.49);
   width: 1440px;
@@ -117,14 +137,14 @@
   color: white;
   font-family: "Noto Sans";
   font-style: normal;
-  top: 25%;
+  top: 180px;
   font-weight: 700;
   font-size: 35px;
-  line-height: 40px;
+  line-height: 50px;
 }
 .contents {
   position: relative;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 .contents_head_1 {
@@ -166,35 +186,59 @@
   left: calc(50% + 260px);
   transform: translate(-50%, 0);
 }
-.contents2ct {
+.contentsct {
   position: relative;
-  width: 1440px;
+  max-width: 1440px;
   height: 500px;
   margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #contents2img {
   position: absolute;
   top: 30px;
   width: 350px;
-  right: 70px;
+  right: 30px;
 }
-#con2hdtext {
+.conhdtext {
   position: relative;
+  z-index: 1;
   font-family: Noto Sans KR Font;
   font-size: 50px;
   margin: 0px;
+  color: black;
 }
-#con2extext {
+.conextext {
   position: relative;
-  margin-top: 10px;
+  z-index: 1;
   font-family: Noto Sans KR Font;
 }
 #context2ct {
   position: absolute;
-  right: 450px;
+  right: 410px;
   top: 30px;
   height: 400px;
   width: 500px;
   text-align: right;
+}
+#contents3img {
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  left: 30px;
+}
+#context3ct {
+  position: absolute;
+  left: 410px;
+  top: 40px;
+  height: 400px;
+  width: 500px;
+  text-align: left;
+}
+#contents4img {
+  position: relative;
+  z-index: 0;
+  top: -120px;
+  width: 330px;
 }
 </style>
