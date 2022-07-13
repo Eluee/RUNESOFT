@@ -257,6 +257,25 @@
           />
         </svg>
       </div>
+
+      <div class="image_slider" slideWidth="100%">
+        <carousel :itemss-to-show="1" :wrapAround="true" :autoplay="5000">
+          <slide v-for="slide in itemss[0].menus" :key="slide">
+            <div class="carousel__item">
+              <figure>
+                <img :src="slide.image" :alt="slide.alt" />
+                <figcaption>
+                  <em>{{ slide.caption }}</em
+                  ><span>{{ slide.description }}</span>
+                </figcaption>
+              </figure>
+            </div>
+          </slide>
+
+          <navigation />
+          <pagination />
+        </carousel>
+      </div>
     </div>
   </div>
 </template>
@@ -340,3 +359,45 @@
   left: 600px;
 }
 </style>
+
+<script>
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+
+export default {
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
+  data() {
+    itemss: [
+      {
+        title: "Carousel Slider",
+        description: "Carousel를 이용한 이미지 슬라이드 효과",
+        menus: [
+          {
+            image: require("@/assets/banner/face.jpg"),
+            alt: "image1",
+            caption: "Responsive Site",
+            description: "슬라이드 플러그인을 이용한 반응형 이미지 슬라이드",
+          },
+          {
+            image: require("@/assets/banner/face.jpg"),
+            alt: "image1",
+            caption: "Responsive Site",
+            description: "슬라이드 플러그인을 이용한 반응형 이미지 슬라이드",
+          },
+          {
+            image: require("@/assets/banner/face.jpg"),
+            alt: "image1",
+            caption: "Responsive Site",
+            description: "슬라이드 플러그인을 이용한 반응형 이미지 슬라이드",
+          },
+        ],
+      },
+    ];
+  },
+};
+</script>
