@@ -1,40 +1,92 @@
 <template>
   <div>
-    <div class="bannerimg">
-      <div class="icon"></div>
-      <p>안녕하세요.<br />룬 소프트에 오신 것을 환영합니다.</p>
-      <svg
-        class="right-arrow"
-        width="70"
-        height="70"
-        viewBox="-10 -10 95 70 "
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+    <div class="mainbannerct">
+      <div
+        class="carousel slide carousel slide"
+        id="mainbannerslide"
+        data-bs-ride="carousel"
       >
-        <path
-          d="M0 59L30 29.5L0 0"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-      <svg
-        class="left-arrow"
-        width="70"
-        height="70"
-        viewBox="0 0 95 70"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M30 59L0 29.5L30 0"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="bannerimg">
+              <div class="icon"></div>
+              <p>안녕하세요.<br />룬 소프트에 오신 것을 환영합니다.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="bannerimg">
+              <p>2 page</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="bannerimg">
+              <p>3 page</p>
+            </div>
+          </div>
+        </div>
+        <div id="controlbar">
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#mainbannerslide"
+            data-bs-slide="next"
+          >
+            <svg
+              class="right-arrow"
+              width="25"
+              height="59"
+              viewBox="0 0 30 59"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_253_346)">
+                <path
+                  d="M0 59L30 29.5L0 0"
+                  stroke="wight"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_253_346">
+                  <rect width="30" height="59" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#mainbannerslide"
+            data-bs-slide="prev"
+          >
+            <svg
+              class="left-arrow"
+              width="25"
+              height="59"
+              viewBox="0 0 30 59"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_253_344)">
+                <path
+                  d="M30 59L0 29.5L30 0"
+                  stroke="wight"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_253_344">
+                  <rect width="30" height="59" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <div class="contents">
       <p class="contents_head_1">소규모로 구성된 팀</p>
@@ -85,6 +137,20 @@
 
 <style scoped>
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap);
+
+#controlbar {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  width: 1440px;
+  height: 60px;
+}
+#carouselExampleFadeasdf {
+  background-color: black;
+}
+.carousel-inner p {
+  color: white;
+}
 .icon {
   position: relative;
   top: 25%;
@@ -97,12 +163,9 @@
 }
 .right-arrow {
   position: absolute;
-  right: 10%;
-  top: 53.7%;
-}
-.right-arrow {
   stroke: white;
   transition: all 0.5s;
+  right: 130px;
 }
 .right-arrow:hover {
   transform: translateX(25px);
@@ -111,22 +174,26 @@
 }
 .left-arrow {
   position: absolute;
-  left: 13.4%;
-  top: 55%;
-}
-.left-arrow {
   stroke: white;
   transition: all 0.5s;
+  left: 130px;
 }
 .left-arrow:hover {
   transform: translateX(-25px);
   transition: all 0.5s;
   transition-timing-function: ease;
 }
+.mainbannerct {
+  position: relative;
+  width: 1440px;
+  height: 600px;
+  margin: 0 auto;
+  top: -56.4px;
+}
 .bannerimg {
   position: relative;
+  z-index: 1;
   left: 50%;
-  margin-top: -57px;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.49);
   width: 1440px;
