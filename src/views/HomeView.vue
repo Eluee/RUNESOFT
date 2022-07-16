@@ -7,7 +7,7 @@
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item active" id="mainslide1">
             <div class="bannerimg">
               <div class="icon"></div>
               <p>안녕하세요.<br />룬 소프트에 오신 것을 환영합니다.</p>
@@ -101,8 +101,8 @@
       <div id="context2ct">
         <p class="conhdtext">가능할 것 같은데?</p>
         <p class="conextext">
-          새로운 가치를 만들기 위한 끊임없는 학습과 도전하는<br />
-          대학생들의 개발 첫 발자국
+          우리에게 가능성만큼 설레는 단어는 없습니다.<br />
+          상상하고 계획하기 꿈과 같은 이야기들은 우리에게 많은 영감을 줍니다.
         </p>
       </div>
       <img
@@ -137,16 +137,15 @@
 
 <style scoped>
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap);
-
+#mainslide1 {
+  background: url(@/assets/banner/mianbannertestimg1.jpeg);
+}
 #controlbar {
   position: absolute;
   top: 50%;
   z-index: 4;
   width: 1440px;
   height: 60px;
-}
-#carouselExampleFadeasdf {
-  background-color: black;
 }
 .carousel-inner p {
   color: white;
