@@ -8,14 +8,14 @@
         <p>룬소프트의 최신 프로젝트를 <br />지금 바로 확인해보세요</p>
       </div>
       <div class="project_img1">
-        <img src="@/assets/banner/project1.jpg" />
+        <img src="@/assets/banner/project/project1.jpg" />
       </div>
     </div>
 
     <div class="project_2">
       <div class="position_box">
         <div class="n_project">
-          <img src="@/assets/banner/Nproject.jpg" />
+          <img src="@/assets/banner/project/Nproject.jpg" />
           <div class="n_project_text">
             <p>새 <br />프로젝트</p>
           </div>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="c_project">
-          <img src="@/assets/banner/cproject.jpg" />
+          <img src="@/assets/banner/project/cproject.jpg" />
           <div class="c_project_text">
             <p>완성 프로젝트</p>
           </div>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="r_project">
-          <img src="@/assets/banner/rproject.jpg" />
+          <img src="@/assets/banner/project/rproject.jpg" />
           <div class="r_project_text">
             <p>계획중인 프로젝트</p>
           </div>
@@ -79,35 +79,46 @@
         <div class="project_name_text">
           <h3>프로젝트 명</h3>
         </div>
-        <div class="project_explain_text">
-          <p>프로젝트 설명</p>
+        <div class="projectnamebox">
+          <div class="project_explain_text">
+            <p>
+              프로젝트 설명 프로젝트 설명 프로젝트 설명 <br />
+              프로젝트 설명 프로젝트 설명 프로젝트 설명 <br />
+              프로젝트 설명 프로젝트 설명 프로젝트 설명 <br />
+              프로젝트 설명 프로젝트 설명 프로젝트 설명
+            </p>
+          </div>
         </div>
-        <img src="@/assets/banner/projectname.jpg" />
+
+        <img src="@/assets/banner/project/projectname.jpg" />
         <div class="line"></div>
-        <div class="d_t_name">
-          <h3>개발자</h3>
-        </div>
-        <div class="line2"></div>
         <div class="d_t_name2">
           <h3>개발 도구</h3>
         </div>
         <div class="line3"></div>
+
+        <!--
+           <div class="d_t_name">
+          <h3>개발자</h3>
+        </div>
+        <div class="line2"></div>
         <div class="d_name">
           <p>정성화 &nbsp; 이병준 &nbsp; 김태호</p>
         </div>
         <div class="f_imgs">
           <div class="f_img">
-            <img src="@/assets/banner/face.jpg" />
+            <img src="@/assets/banner/project/face.jpg" />
           </div>
           <div class="f_img2">
-            <img src="@/assets/banner/face.jpg" />
+            <img src="@/assets/banner/project/face.jpg" />
           </div>
           <div class="f_img3">
-            <img src="@/assets/banner/face.jpg" />
+            <img src="@/assets/banner/project/face.jpg" />
           </div>
         </div>
+        -->
         <div class="v_img">
-          <img src="@/assets/banner/vue.png" />
+          <img src="@/assets/banner/project/vue.png" />
         </div>
       </div>
     </div>
@@ -128,7 +139,7 @@
   background-color: gray;
   width: 1440px;
   height: 350px;
-  margin-top: -45px;
+  margin-top: -56px;
 }
 .project_text {
   left: 200px;
@@ -188,7 +199,7 @@
 .n_project_text {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 65%;
+  top: 70%;
   left: 20%;
   color: azure;
   text-align: left;
@@ -200,7 +211,7 @@
   font-size: 30px;
   z-index: 2;
   right: 3%;
-  top: 75%;
+  top: 82%;
 }
 .c_project {
   position: absolute;
@@ -218,13 +229,13 @@
   position: absolute;
   transform: translate(50%, -50%);
   color: aliceblue;
-  top: 50%;
+  top: 60%;
   z-index: 1;
 }
 .c_project_text2 {
   position: absolute;
   color: aliceblue;
-  top: 70%;
+  top: 80%;
   left: 85%;
   z-index: 1;
 }
@@ -242,13 +253,13 @@
   position: absolute;
   color: aliceblue;
   transform: translate(27%, -150%);
-
+  top: 85%;
   z-index: 1;
 }
 .r_project_text2 {
   position: absolute;
   color: aliceblue;
-  top: 70%;
+  top: 80%;
   left: 85%;
   z-index: 1;
 }
@@ -313,31 +324,30 @@
 .project_name_text {
   position: absolute;
   z-index: 1;
-  top: 220px;
+  top: 240px;
   left: 10px;
   font-size: 20px;
 }
 .line {
   position: absolute;
-  z-index: 1;
   width: 370px;
   height: 1px;
   border-top: 1.33px solid #cccccc;
   left: 12px;
   top: 280px;
 }
-.d_t_name {
+
+.project_explain_text {
   position: absolute;
-  z-index: 1;
-  left: 10px;
-  top: 280px;
-  font-size: 20px;
+  top: 10px;
+  left: 14px;
+  font-size: 15px;
 }
 .d_t_name2 {
   position: absolute;
   z-index: 1;
   left: 10px;
-  top: 425px;
+  top: 445px;
   font-size: 20px;
 }
 .line3 {
@@ -349,11 +359,29 @@
   left: 12px;
   top: 490px;
 }
+.projectnamebox {
+  position: absolute;
+  z-index: 2;
+  width: 400px;
+  height: 160px;
+  top: 280px;
+  left: 0px;
+  background-color: rgb(252, 252, 250);
+}
+/*
+.d_t_name {
+  position: absolute;
+  z-index: 1;
+  left: 10px;
+  top: 300px;
+  font-size: 20px;
+}
+
 .d_name {
   position: absolute;
   z-index: 1;
   left: 8px;
-  top: 390px;
+  top: 0px;
 }
 .line2 {
   position: absolute;
@@ -396,6 +424,7 @@
   top: 0px;
   border-radius: 25px;
 }
+*/
 .v_img img {
   position: absolute;
   z-index: 1;
