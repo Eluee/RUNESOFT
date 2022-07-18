@@ -139,7 +139,6 @@
   </div>
 </template>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
 <style scoped>
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap);
 #mainslide1 {
