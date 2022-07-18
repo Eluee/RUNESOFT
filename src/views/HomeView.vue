@@ -98,9 +98,9 @@
       <p class="contents_head_1">소규모로 구성된 팀</p>
       <p class="contents_text">룬 소프트는 대학생들로 모인 소규모 팀입니다.</p>
       <div id="user_ct">
-        <img class="user_1" src="@/components/icon/user.svg" />
-        <img class="user_2" src="@/components/icon/user.svg" />
-        <img class="user_3" src="@/components/icon/user.svg" />
+        <img class="user_1" src="@/assets/icon/user.svg" />
+        <img class="user_2" src="@/assets/icon/user.svg" />
+        <img class="user_3" src="@/assets/icon/user.svg" />
       </div>
     </div>
     <div class="contentsct">
@@ -302,7 +302,7 @@
   left: 410px;
   top: 40px;
   height: 400px;
-  width: 500px;
+  width: 600px;
   text-align: left;
 }
 #contents4img {

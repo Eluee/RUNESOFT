@@ -3,7 +3,7 @@
     <!--overflow-x: hidden 가로 공백 스크롤 숨기기-->
     <div class="topbar">
       <a>RUNE SOFT</a>
-      <img src="@/components/icon/users.svg" />
+      <img src="@/assets/icon/users.svg" />
       <p id="guestnum">{{ guest }}</p>
     </div>
     <div class="navbar">
@@ -27,16 +27,16 @@
       <div id="footer_1_ct">
         <div id="footer_1_1_ct">
           <p class="footer_1_1_text">팀소개</p>
-          <img src="@/components/icon/footer_bar_icon.svg" />
+          <img src="@/assets/icon/footer_bar_icon.svg" />
           <p class="footer_1_1_text">이용약관</p>
-          <img src="@/components/icon/footer_bar_icon.svg" />
+          <img src="@/assets/icon/footer_bar_icon.svg" />
           <p class="footer_1_1_text">개인정보처리방침</p>
-          <img src="@/components/icon/footer_bar_icon.svg" />
+          <img src="@/assets/icon/footer_bar_icon.svg" />
           <p class="footer_1_1_text">전화문의</p>
         </div>
         <div id="footer_1_2_ct">
           <p>고객센터</p>
-          <img src="@/components/icon/inv_triangle.svg" />
+          <img src="@/assets/icon/inv_triangle.svg" />
         </div>
       </div>
       <div id="footer_2_ct">
