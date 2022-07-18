@@ -1,4 +1,5 @@
 <template>
+  <div id="navBg"></div>
   <div id="topBanner">
     <div id="photosGroup">
       <ul>
@@ -12,7 +13,30 @@
   <div id="infoBanner">
     <div class="infoGroup">
       <div class="infoIcon" color="#9979c1">
-        <img src="@/assets/banner/infoIcon1.svg" />
+        <svg
+          width="150"
+          height="150"
+          viewBox="0 0 150 150"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="icon1Path1"
+            d="M118.75 105.625C126.345 104.083 133.095 99.7737 137.692 93.5341C142.288 87.2946 144.402 79.5698 143.623 71.8593C142.844 64.1489 139.228 57.0028 133.477 51.8085C127.726 46.6142 120.25 43.7421 112.5 43.7499H104.625C102.554 35.7332 98.5252 28.3561 92.8993 22.2811C87.2735 16.2061 80.227 11.6232 72.3926 8.94406C64.5582 6.26489 56.181 5.57324 48.0133 6.93122C39.8456 8.28919 32.1429 11.6543 25.5969 16.7243C19.0508 21.7944 13.8664 28.4108 10.5089 35.9794C7.15146 43.548 5.72614 51.8319 6.36091 60.0874C6.99568 68.3429 9.67067 76.3115 14.1457 83.2778C18.6208 90.2442 24.7558 95.9902 32 99.9999"
+            stroke="#9979C1"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            class="icon1Path2"
+            d="M81.25 68.75L56.25 106.25H93.75L68.75 143.75"
+            stroke="#9979C1"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
       </div>
       <div class="infoTitleCtn">
         <div style="font-size: 28px">1</div>
@@ -32,7 +56,7 @@
     </div>
     <div class="infoGroup">
       <div class="infoIcon" color="#799ac1">
-        <img src="@/assets/banner/infoIcon2.svg" />
+        <img src="@/assets/info/infoIcon2.svg" />
       </div>
       <div class="infoTitleCtn">
         <div style="font-size: 28px">2</div>
@@ -53,7 +77,7 @@
     </div>
     <div class="infoGroup">
       <div class="infoIcon" color="#7ac179">
-        <img src="@/assets/banner/infoIcon3.svg" />
+        <img src="@/assets/info/infoIcon3.svg" />
       </div>
       <div class="infoTitleCtn">
         <div style="font-size: 28px">3</div>
@@ -74,7 +98,7 @@
     </div>
     <div class="infoGroup">
       <div class="infoIcon" color="#c1a979">
-        <img src="@/assets/banner/infoIcon4.svg" />
+        <img src="@/assets/info/infoIcon4.svg" />
       </div>
       <div class="infoTitleCtn">
         <div style="font-size: 28px">4</div>
@@ -103,7 +127,7 @@
     <div class="devGroup">
       <div class="devImgAndName">
         <div class="devImage">
-          <img src="@/assets/banner/JeongSeongHwa.png" />
+          <img src="@/assets/info/JeongSeongHwa.png" />
         </div>
         <div class="devName">정성화</div>
       </div>
@@ -117,7 +141,9 @@
           다양한 관점으로 문제를 바라볼 수 있도록<br />
           팀원들과 소통하는 개발자입니다.
         </div>
-        <div class="gitIcon"><img src="@/assets/banner/gitIcon.svg" /></div>
+        <div class="gitIcon">
+          <img src="@/assets/info/gitIcon.svg" />
+        </div>
         <a class="gitAccount" href="https://github.com/Eluee" target="_blank"
           >https://github.com/Eluee</a
         >
@@ -126,7 +152,7 @@
     <div class="devGroup">
       <div class="devImgAndName">
         <div class="devImage">
-          <img src="@/assets/banner/LeeByeongJun.png" />
+          <img src="@/assets/info/LeeByeongJun.png" />
         </div>
         <div class="devName">이병준</div>
       </div>
@@ -138,7 +164,9 @@
           가상공간에서 현실감을 더 느끼도록 만드는데<br />힘을 보태고 싶은
           개발자 이병준입니다.
         </div>
-        <div class="gitIcon"><img src="@/assets/banner/gitIcon.svg" /></div>
+        <div class="gitIcon">
+          <img src="@/assets/info/gitIcon.svg" />
+        </div>
         <a class="gitAccount" href="https://github.com/Lbj0820" target="_blank"
           >https://github.com/Lbj0820</a
         >
@@ -147,13 +175,15 @@
     <div class="devGroup">
       <div class="devImgAndName">
         <div class="devImage">
-          <img src="@/assets/banner/KimTaeHo.png" />
+          <img src="@/assets/info/KimTaeHo.png" />
         </div>
         <div class="devName">김태호</div>
       </div>
       <div class="devTalkBoxLeft">
         <div class="devTalkTxt"></div>
-        <div class="gitIcon"><img src="@/assets/banner/gitIcon.svg" /></div>
+        <div class="gitIcon">
+          <img src="@/assets/info/gitIcon.svg" />
+        </div>
         <a class="gitAccount" href="https://github.com/kth7414" target="_blank"
           >https://github.com/kth7414</a
         >
@@ -164,6 +194,12 @@
 <style scoped>
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap);
+#navBg {
+  width: 100%;
+  height: 50px;
+  background-color: #000000;
+  margin-top: -41px;
+}
 #topBanner {
   width: 1440px;
   height: 300px;
@@ -186,16 +222,16 @@
   background-size: cover;
 }
 #photosGroup ul li:nth-child(1) {
-  background-image: url(@/assets/banner/value1.jpg);
+  background-image: url(@/assets/info/value1.jpg);
 }
 #photosGroup ul li:nth-child(2) {
-  background-image: url(@/assets/banner/value2.jpg);
+  background-image: url(@/assets/info/value2.jpg);
 }
 #photosGroup ul li:nth-child(3) {
-  background-image: url(@/assets/banner/value3.jpg);
+  background-image: url(@/assets/info/value3.jpg);
 }
 #photosGroup ul li:nth-child(4) {
-  background-image: url(@/assets/banner/value4.jpg);
+  background-image: url(@/assets/info/value4.jpg);
 }
 
 #infoBanner {
@@ -219,6 +255,7 @@
   height: 41px;
   margin: auto;
   margin-top: 20px;
+  opacity: 0;
 }
 .infoTitleCtn div {
   display: inline;
@@ -231,6 +268,7 @@
   height: 90px;
   margin: auto;
   margin-top: 40px;
+  opacity: 0;
 }
 .infoBodyCtn div {
   display: inline;
@@ -246,7 +284,7 @@
   width: 1440px;
   height: 1600px;
   margin: 0 auto;
-  background: url(@/assets/banner/devInfo.jpg);
+  background: url(@/assets/info/devInfo.jpg);
   background-size: cover;
   overflow: auto;
 }
@@ -290,7 +328,7 @@
 .devTalkBoxLeft {
   width: 485.5px;
   height: 350px;
-  background-image: url(@/assets/banner/devTalkBox.png);
+  background-image: url(@/assets/info/devTalkBox.png);
   overflow: hidden;
 }
 .devTalkTxt {
@@ -315,4 +353,62 @@
   text-decoration: none;
   color: #999999;
 }
+.infoIcon:nth-child(1) path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+.infoGroup:nth-child(1):hover path:nth-child(1) {
+  animation: iconAppear 0.3s linear forwards;
+}
+.infoGroup:nth-child(1):hover path:nth-child(2) {
+  animation: iconAppear2 0.6s ease forwards 0.3s;
+}
+.infoGroup:nth-child(1):hover .infoTitleCtn {
+  animation: textAppear 0.3s ease forwards 0.6s;
+}
+.infoGroup:nth-child(1):hover .infoBodyCtn {
+  animation: textAppear 0.3s ease forwards 0.7s;
+}
+@keyframes iconAppear {
+  0% {
+    stroke-dashoffset: -300;
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes iconAppear2 {
+  0% {
+    stroke-dashoffset: 300;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+@keyframes textAppear {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 </style>
+<script>
+// window.addEventListener("scroll", function () {
+//   let value = window.scrollY;
+//   console.log(value);
+//   if (value > 300) {
+//     document.querySelector(".icon1Path1").style.animation = "iconAppear 0.5s";
+//     document.querySelector(".icon1Path2").style.animation = "iconAppear 0.5s";
+//   }
+// });
+</script>
