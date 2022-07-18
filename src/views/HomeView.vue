@@ -1,11 +1,13 @@
 <template>
   <div>
+    <!-- 메인 슬라이드 컨테이너 -->
     <div class="mainbannerct">
       <div
         class="carousel slide carousel slide"
         id="mainbannerslide"
         data-bs-ride="carousel"
       >
+        <!--슬라이드-->
         <div class="carousel-inner">
           <div class="carousel-item active" id="mainslide1">
             <div class="bannerimg">
@@ -24,6 +26,7 @@
             </div>
           </div>
         </div>
+        <!--컨트롤러-->
         <div id="controlbar">
           <button
             class="carousel-control-next"
@@ -31,6 +34,7 @@
             data-bs-target="#mainbannerslide"
             data-bs-slide="next"
           >
+            <!-- 컨트롤러 아이콘 -->
             <svg
               class="right-arrow"
               width="25"
@@ -61,6 +65,7 @@
             data-bs-target="#mainbannerslide"
             data-bs-slide="prev"
           >
+            <!-- 컨트롤러 아이콘 -->
             <svg
               class="left-arrow"
               width="25"
@@ -88,6 +93,7 @@
         </div>
       </div>
     </div>
+    <!-- 컨텐츠 시작 -->
     <div class="contents">
       <p class="contents_head_1">소규모로 구성된 팀</p>
       <p class="contents_text">룬 소프트는 대학생들로 모인 소규모 팀입니다.</p>
@@ -133,8 +139,7 @@
   </div>
 </template>
 
-<script></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
 <style scoped>
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap);
 #mainslide1 {
@@ -284,7 +289,7 @@
   right: 410px;
   top: 30px;
   height: 400px;
-  width: 500px;
+  width: 550px;
   text-align: right;
 }
 #contents3img {
