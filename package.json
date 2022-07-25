@@ -11,7 +11,8 @@
     "bootstrap": "^5.2.0-beta1",
     "core-js": "^3.8.3",
     "matter-js": "^0.18.0",
-    "sass": "^1.53.0",
+    "pathseg": "^1.2.1",
+    "poly-decomp": "^0.3.0",
     "vue": "^3.2.37",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
@@ -51,7 +52,8 @@
         {
           "endOfLine": "auto"
         }
-      ]
+      ],
+      "no-unused-vars": "off"
     }
   },
   "browserslist": [
