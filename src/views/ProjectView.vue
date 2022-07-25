@@ -8,14 +8,14 @@
         <p>룬소프트의 최신 프로젝트를 <br />지금 바로 확인해보세요</p>
       </div>
       <div class="project_img1">
-        <img src="@/assets/banner/project1.jpg" />
+        <img src="@/assets/banner/project/project1.jpg" />
       </div>
     </div>
 
     <div class="project_2">
       <div class="position_box">
         <div class="n_project">
-          <img src="@/assets/banner/Nproject.jpg" />
+          <img src="@/assets/banner/project/Nproject.jpg" />
           <div class="n_project_text">
             <p>새 <br />프로젝트</p>
           </div>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="c_project">
-          <img src="@/assets/banner/cproject.jpg" />
+          <img src="@/assets/banner/project/cproject.jpg" />
           <div class="c_project_text">
             <p>완성 프로젝트</p>
           </div>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="r_project">
-          <img src="@/assets/banner/rproject.jpg" />
+          <img src="@/assets/banner/project/rproject.jpg" />
           <div class="r_project_text">
             <p>계획중인 프로젝트</p>
           </div>
@@ -74,45 +74,62 @@
         </div>
       </div>
     </div>
-    <div class="project_3">
-      <div class="project_name">
-        <div class="project_name_text">
-          <h3>프로젝트 명</h3>
+
+    <!-- dd -->
+    <div class="project_name">
+      <div v-for="(dbdata, index) in dbdata" :key="index">
+        <img class="image" :src="dbdata.image" />
+        <div class="project_name_text" :style="atr" @click="view = ture">
+          <P>프로젝트 명: {{ dbdata.title }} </P>
         </div>
-        <div class="project_explain_text">
-          <p>프로젝트 설명</p>
+        <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
+        <div class="projectnamebox">
+          <div class="project_explain_text">
+            <p>{{ dbdata.content }}</p>
+          </div>
         </div>
-        <img src="@/assets/banner/projectname.jpg" />
-        <div class="line"></div>
-        <div class="d_t_name">
-          <h3>개발자</h3>
-        </div>
-        <div class="line2"></div>
         <div class="d_t_name2">
-          <h3>개발 도구</h3>
+          <p>개발 도구</p>
+          <div class="line3"></div>
         </div>
-        <div class="line3"></div>
-        <div class="d_name">
-          <p>정성화 &nbsp; 이병준 &nbsp; 김태호</p>
-        </div>
-        <div class="f_imgs">
-          <div class="f_img">
-            <img src="@/assets/banner/face.jpg" />
-          </div>
-          <div class="f_img2">
-            <img src="@/assets/banner/face.jpg" />
-          </div>
-          <div class="f_img3">
-            <img src="@/assets/banner/face.jpg" />
-          </div>
-        </div>
-        <div class="v_img">
-          <img src="@/assets/banner/vue.png" />
-        </div>
+        <img class="image2" :src="dbdata.dt_image" />
+        <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
+        <button @click="increase(index)">프로젝트 좋아요</button>
+        <span> 좋아요 수 : {{ num[index] }} </span>
+        <!--@click vue 문법임 -->
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import project3 from "@/project.js"; // js 데이터를 불러와서 사용할때
+
+export default {
+  data() {
+    //데이터 바인딩 데이터를 사용할때 오브젝트 형식 {} 으로 저장
+    return {
+      dbdata: project3, // 데이터 바인딩을 사용하여 데이터를 주입 할 수 있음
+      view: false,
+      atr: "color : black", // 속성 또한 바인딩 가능
+      // App.vue 의 경로가 src안에 있는데 왜 ./assets/room0.jpg 는 안되는건지....
+    };
+  },
+  // 이곳이 함수(메소드)를 만들고 관리하는 공간.
+  methods: {
+    increase(index) {
+      this.num[index]++;
+    },
+  },
+  setup() {
+    return {
+      np_num: 0,
+      cp_num: 0,
+      rp_num: 1,
+    };
+  },
+};
+</script>
 
 <style scoped>
 .project {
@@ -128,7 +145,7 @@
   background-color: gray;
   width: 1440px;
   height: 350px;
-  margin-top: -45px;
+  margin-top: -56px;
 }
 .project_text {
   left: 200px;
@@ -188,7 +205,7 @@
 .n_project_text {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 65%;
+  top: 70%;
   left: 20%;
   color: azure;
   text-align: left;
@@ -200,7 +217,7 @@
   font-size: 30px;
   z-index: 2;
   right: 3%;
-  top: 75%;
+  top: 82%;
 }
 .c_project {
   position: absolute;
@@ -218,13 +235,13 @@
   position: absolute;
   transform: translate(50%, -50%);
   color: aliceblue;
-  top: 50%;
+  top: 60%;
   z-index: 1;
 }
 .c_project_text2 {
   position: absolute;
   color: aliceblue;
-  top: 70%;
+  top: 80%;
   left: 85%;
   z-index: 1;
 }
@@ -242,13 +259,13 @@
   position: absolute;
   color: aliceblue;
   transform: translate(27%, -150%);
-
+  top: 85%;
   z-index: 1;
 }
 .r_project_text2 {
   position: absolute;
   color: aliceblue;
-  top: 70%;
+  top: 80%;
   left: 85%;
   z-index: 1;
 }
@@ -295,7 +312,7 @@
 }
 
 .project_name {
-  background-color: aliceblue;
+  background-color: rgb(242, 246, 249);
   width: 400px;
   height: 570px;
   position: relative;
@@ -303,42 +320,42 @@
   left: 100px;
   top: 0px;
 }
-.project_name img {
+.image img {
   position: absolute;
   width: 400px;
   height: 230px;
-  left: 0px;
   top: 0px;
+  left: 100px;
+  z-index: 1;
 }
 .project_name_text {
   position: absolute;
   z-index: 1;
-  top: 220px;
+  top: 240px;
   left: 10px;
   font-size: 20px;
 }
-.line {
+
+.project_explain_text {
   position: absolute;
-  z-index: 1;
-  width: 370px;
-  height: 1px;
-  border-top: 1.33px solid #cccccc;
-  left: 12px;
-  top: 280px;
-}
-.d_t_name {
-  position: absolute;
-  z-index: 1;
-  left: 10px;
-  top: 280px;
-  font-size: 20px;
+  top: 10px;
+  left: 14px;
+  font-size: 15px;
 }
 .d_t_name2 {
   position: absolute;
   z-index: 1;
   left: 10px;
-  top: 425px;
+  top: 445px;
   font-size: 20px;
+}
+.d_t_name2 img {
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  left: 10px;
+  top: 510px;
 }
 .line3 {
   position: absolute;
@@ -349,71 +366,13 @@
   left: 12px;
   top: 490px;
 }
-.d_name {
+.projectnamebox {
   position: absolute;
-  z-index: 1;
-  left: 8px;
-  top: 390px;
-}
-.line2 {
-  position: absolute;
-  z-index: 1;
-  width: 370px;
-  height: 1px;
-  border-top: 1.33px solid #cccccc;
-  left: 12px;
-  top: 340px;
-}
-.f_imgs {
-  position: absolute;
-  left: 10px;
-  top: 350px;
-}
-.f_img img {
-  position: absolute;
-  z-index: 1;
-  width: 50px;
-  height: 50px;
+  z-index: 2;
+  width: 400px;
+  height: 160px;
+  top: 280px;
   left: 0px;
-  top: 0px;
-  border-radius: 25px;
-}
-.f_img2 img {
-  position: absolute;
-  z-index: 1;
-  width: 50px;
-  height: 50px;
-  left: 65px;
-  top: 0px;
-  border-radius: 25px;
-}
-.f_img3 img {
-  position: absolute;
-  z-index: 1;
-  width: 50px;
-  height: 50px;
-  left: 130px;
-  top: 0px;
-  border-radius: 25px;
-}
-.v_img img {
-  position: absolute;
-  z-index: 1;
-  width: 50px;
-  height: 50px;
-  left: 10px;
-  top: 510px;
+  background-color: rgb(252, 252, 250);
 }
 </style>
-
-<script>
-export default {
-  data() {
-    return {
-      np_num: 0,
-      cp_num: 0,
-      rp_num: 1,
-    };
-  },
-};
-</script>
