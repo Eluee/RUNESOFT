@@ -324,7 +324,6 @@
             <span class="visually-hidden">Previous</span>
           </button>
           <button
-            color="black"
             class="carousel-control-next"
             type="button"
             data-bs-target="#carouselExampleIndicators"
