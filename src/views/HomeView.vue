@@ -141,7 +141,6 @@
 </template>
 <script>
 import Matter from "matter-js";
-import { removeDotSegments } from "uri-js";
 
 export default {
   mounted() {
@@ -192,18 +191,14 @@ export default {
     Runner.run(runner, engine); // 월드 렌더링
 
     //원 만들기
-    const circle = Bodies.circle(1000, 500, 10, {
+    const circle = Bodies.circle(500, 100, 70, {
       friction: 0.2,
       // 단어 그대로 마찰력 값입니다. (0~1)
       restitution: 0.8,
       // 단어 그대로 복원력 입니다. (0~1)
       render: {
-        sprite: {
-          texturl:
-            "/Users/jsh/Desktop/RUNESOFT/RUNESOFT/src/assets/icon/free-icon-github-logo-25231.png",
-        },
+        sprite: {},
       },
-      // fillStyle 은 채워질 색, strokeStyle은 선색, lineWidth 선 굵기
     });
 
     // 임시바닥
@@ -211,7 +206,6 @@ export default {
       Bodies.rectangle(0, 600, 3000, 10, { isStatic: true }),
       circle,
     ]);
-    // fit the render viewport to the scene
   },
 };
 </script>
