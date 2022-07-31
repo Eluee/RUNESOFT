@@ -25,6 +25,11 @@ const routes = [
     name: "community",
     component: () => import("../views/CommunityView.vue"),
   },
+  {
+    path: "/notice",
+    name: "notice",
+    component: () => import("../views/NoticeView.vue"),
+  },
 ];
 
 const router = createRouter({

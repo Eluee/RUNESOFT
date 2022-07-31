@@ -11,7 +11,8 @@
         <router-link to="/">HOME</router-link>
         <router-link to="/info">INFO</router-link>
         <router-link to="/project">PROJECT</router-link>
-        <router-link to="/community">COMMUNITY</router-link>
+        <!--<router-link to="/community">COMMUNITY</router-link>-->
+        <router-link to="/notice">NOTICE</router-link>
       </nav>
     </div>
     <router-view />
@@ -21,7 +22,8 @@
           <router-link to="/">메인홈</router-link>
           <router-link to="/info">개발자정보</router-link>
           <router-link to="/project">프로젝트</router-link>
-          <router-link to="/community">커뮤니티</router-link>
+          <!--<router-link to="/community">커뮤니티</router-link>-->
+          <router-link to="/notice">공지사항</router-link>
         </nav>
       </div>
       <div id="footer_1_ct">
