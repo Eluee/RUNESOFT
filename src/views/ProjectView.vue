@@ -74,51 +74,37 @@
         </div>
       </div>
     </div>
-    <div class="project_3">
-      <div class="project_name">
-        <div class="project_name_text">
-          <h3>프로젝트 명</h3>
-        </div>
-        <div class="projectnamebox">
-          <div class="project_explain_text">
-            <p>
-              프로젝트 설명 프로젝트 설명 프로젝트 설명 <br />
-              프로젝트 설명 프로젝트 설명 프로젝트 설명 <br />
-              프로젝트 설명 프로젝트 설명 프로젝트 설명 <br />
-              프로젝트 설명 프로젝트 설명 프로젝트 설명
-            </p>
-          </div>
-        </div>
 
-        <img src="@/assets/banner/project/projectname.jpg" />
-        <div class="line"></div>
-        <div class="d_t_name2">
-          <h3>개발 도구</h3>
-        </div>
-        <div class="line3"></div>
+    <div class="project3">
+      <!-- vue html 반복문 문법 사용 -->
+      <!-- value: menu의 각 원소를 가져옴 , index: 0부터 1씩 증가하는 정수  :key=횟수 가 들어가는것이 일반적임 -->
+      <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
 
-        <!--
-           <div class="d_t_name">
-          <h3>개발자</h3>
-        </div>
-        <div class="line2"></div>
-        <div class="d_name">
-          <p>정성화 &nbsp; 이병준 &nbsp; 김태호</p>
-        </div>
-        <div class="f_imgs">
-          <div class="f_img">
-            <img src="@/assets/banner/project/face.jpg" />
+      <div v-for="(dbdata, index) in dbdata" :key="index">
+        <div class="projectbox" style="float: left">
+          <div class="project_name">
+            <img class="image" :src="dbdata.image" />
+            <h3 class="project_name_text" :style="atr" @click="view = ture">
+              프로젝트 명: {{ dbdata.title }}
+            </h3>
+            <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
+            <div class="projectnamebox">
+              <div class="project_explain_text">
+                <p>{{ dbdata.content }}</p>
+              </div>
+            </div>
+            <div class="d_t_name2">
+              <h3>개발 도구</h3>
+              <div class="line3"></div>
+              <img class="image2" :src="dbdata.image2" />
+            </div>
+            <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
+            <div class="love">
+              <button @click="increase(index)">프로젝트 좋아요</button>
+              <span> 좋아요 수 : {{ num[index] }} </span>
+            </div>
+            <!--@click vue 문법임 -->
           </div>
-          <div class="f_img2">
-            <img src="@/assets/banner/project/face.jpg" />
-          </div>
-          <div class="f_img3">
-            <img src="@/assets/banner/project/face.jpg" />
-          </div>
-        </div>
-        -->
-        <div class="v_img">
-          <img src="@/assets/banner/project/vue.png" />
         </div>
       </div>
     </div>
@@ -304,50 +290,56 @@
   transition: all 1s;
   transition-timing-function: ease;
 }
+.project3 {
+  position: relative;
+  width: 1440px;
+  height: 4000px;
+}
+.projectbox {
+  background-color: white;
+  position: relative;
+  width: 450px;
+  height: 620px;
+  left: 4%;
+}
 
 .project_name {
   background-color: aliceblue;
   width: 400px;
   height: 570px;
-  position: relative;
-  z-index: 1;
-  left: 100px;
-  top: 0px;
+  position: absolute;
 }
-.project_name img {
+
+.program_name a {
+  padding: 20px;
+}
+
+.image {
   position: absolute;
   width: 400px;
   height: 230px;
-  left: 0px;
-  top: 0px;
+  left: 0%;
+  top: 0%;
 }
 .project_name_text {
   position: absolute;
   z-index: 1;
-  top: 240px;
-  left: 10px;
+  top: 42%;
+  left: 3%;
   font-size: 20px;
-}
-.line {
-  position: absolute;
-  width: 370px;
-  height: 1px;
-  border-top: 1.33px solid #cccccc;
-  left: 12px;
-  top: 280px;
 }
 
 .project_explain_text {
   position: absolute;
-  top: 10px;
-  left: 14px;
+  top: 5%;
+  left: 3%;
   font-size: 15px;
 }
 .d_t_name2 {
   position: absolute;
   z-index: 1;
-  left: 10px;
-  top: 445px;
+  left: 4%;
+  top: 78%;
   font-size: 20px;
 }
 .line3 {
@@ -356,93 +348,56 @@
   width: 370px;
   height: 1px;
   border-top: 1.33px solid #cccccc;
-  left: 12px;
-  top: 490px;
+  left: 3%;
+  top: 90%;
 }
 .projectnamebox {
   position: absolute;
   z-index: 2;
   width: 400px;
   height: 160px;
-  top: 280px;
-  left: 0px;
+  top: 48%;
+  left: 0%;
   background-color: rgb(252, 252, 250);
 }
-/*
-.d_t_name {
-  position: absolute;
-  z-index: 1;
-  left: 10px;
-  top: 300px;
-  font-size: 20px;
-}
 
-.d_name {
-  position: absolute;
-  z-index: 1;
-  left: 8px;
-  top: 0px;
-}
-.line2 {
-  position: absolute;
-  z-index: 1;
-  width: 370px;
-  height: 1px;
-  border-top: 1.33px solid #cccccc;
-  left: 12px;
-  top: 340px;
-}
-.f_imgs {
-  position: absolute;
-  left: 10px;
-  top: 350px;
-}
-.f_img img {
+.image2 {
   position: absolute;
   z-index: 1;
   width: 50px;
   height: 50px;
-  left: 0px;
-  top: 0px;
-  border-radius: 25px;
+  left: 5%;
+  top: 120%;
 }
-.f_img2 img {
+.love {
   position: absolute;
-  z-index: 1;
-  width: 50px;
-  height: 50px;
-  left: 65px;
-  top: 0px;
-  border-radius: 25px;
-}
-.f_img3 img {
-  position: absolute;
-  z-index: 1;
-  width: 50px;
-  height: 50px;
-  left: 130px;
-  top: 0px;
-  border-radius: 25px;
-}
-*/
-.v_img img {
-  position: absolute;
-  z-index: 1;
-  width: 50px;
-  height: 50px;
-  left: 10px;
-  top: 510px;
+  top: 90%;
+  left: 40%;
 }
 </style>
 
 <script>
+import projectg from "@/script/project/projectg.js";
+// js 데이터를 불러와서 사용할때
+
 export default {
   data() {
+    //데이터 바인딩 데이터를 사용할때 오브젝트 형식 {} 으로 저장
     return {
+      dbdata: projectg, // 데이터 바인딩을 사용하여 데이터를 주입 할 수 있음
+      view: false,
+      num: [0, 0, 0, 0],
+      atr: "color : blue", // 속성 또한 바인딩 가능
+
       np_num: 0,
       cp_num: 0,
       rp_num: 1,
     };
+  },
+  methods: {
+    increase(index) {
+      this.num[index]++;
+    },
   },
 };
 </script>
