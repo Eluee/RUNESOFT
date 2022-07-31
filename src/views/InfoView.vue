@@ -11,14 +11,11 @@
       <li class="value">
         <img src="@/assets/info/value3.jpg" />
       </li>
-      <li class="value">
-        <img src="@/assets/info/value4.jpg" />
-      </li>
     </ul>
   </div>
   <div class="mainBanner">
     <ul class="wrap-contents">
-      <li class="contents" id="content1">
+      <li class="contents">
         <svg
           width="150"
           height="150"
@@ -296,11 +293,12 @@
 }
 .topBanner {
   width: 100%;
-  height: 300px;
+  height: 544px;
   background-color: #ddf1ff;
 }
 .wrap-values {
   display: inline-flex;
+  height: 100%;
   padding: 0px;
   list-style: none;
 
@@ -309,14 +307,10 @@
   /*flex-flow: row nowrap;*/
 
   justify-content: center;
-
-  overflow: hidden;
-}
-.value {
-  width: 240px;
-  height: 100%;
 }
 .value img {
+  width: 400px;
+  height: 100%;
   filter: grayscale(100%);
   transition: 0.25s;
 }
