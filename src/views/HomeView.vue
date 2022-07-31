@@ -15,9 +15,9 @@
               <p>안녕하세요.<br />룬 소프트에 오신 것을 환영합니다.</p>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" id="mainslide2">
             <div class="bannerimg">
-              <p>2 page</p>
+              <NoticeBanner></NoticeBanner>
             </div>
           </div>
           <div class="carousel-item">
@@ -141,8 +141,12 @@
 </template>
 <script>
 import Matter from "matter-js";
+import NoticeBanner from "@/components/noticeBanner.vue";
 
 export default {
+  components: {
+    NoticeBanner,
+  },
   mounted() {
     var Engine = Matter.Engine,
       Render = Matter.Render,
@@ -213,6 +217,9 @@ export default {
 <style scoped>
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap);
 #mainslide1 {
+  background: url(@/assets/banner/mianbannertestimg1.jpeg);
+}
+#mainslide2 {
   background: url(@/assets/banner/mianbannertestimg1.jpeg);
 }
 #controlbar {
