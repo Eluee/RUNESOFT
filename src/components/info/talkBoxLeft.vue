@@ -31,38 +31,37 @@
 }
 .wrap-profileImg {
   display: inline-block;
-  width: 70px;
+  width: 11.7%;
 }
 .profileImg {
-  width: 70px;
-  height: 70px;
-  border-radius: 35px;
+  width: 100%;
+  border-radius: 50%;
   background-size: cover;
 }
 .wrap-nameAndTalk {
   display: inline-block;
-  width: 530px;
+  width: 88.3%;
 }
 .wrap-ProfileName {
-  width: 510px;
+  width: 95%;
   height: 20px;
-  transform: translateX(20px);
+  transform: translateX(5%);
 }
 .wrap-TalkBox {
-  width: 530px;
+  width: 95%;
 }
 .TalkBox {
   position: relative;
   background: #d9d9d9;
   box-sizing: border-box;
-  border-radius: 5px;
-  width: 510px;
-  padding: 20px;
-  left: 20px;
+  border-radius: 1%;
+  width: 100%;
+  padding: 5%;
+  left: 5%;
 }
 .TalkBox:after {
   right: 100%;
-  top: 40px;
+  top: 40%;
   border: solid transparent;
   content: "";
   height: 0;
@@ -91,5 +90,15 @@
     brightness(97%) contrast(76%);
   transition: 0.5s;
   transition-delay: 0.25s;
+}
+
+/*640px 이하*/
+@media screen and (max-width: 640px) {
+  .devTalkBox {
+    width: 100%;
+  }
+  .TalkBox:after {
+    display: none;
+  }
 }
 </style>

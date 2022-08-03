@@ -11,6 +11,9 @@
       <li class="value">
         <img src="@/assets/info/value3.jpg" />
       </li>
+      <li class="value">
+        <img src="@/assets/info/value4.jpg" />
+      </li>
     </ul>
   </div>
   <div class="mainBanner">
@@ -38,18 +41,12 @@
             stroke-linejoin="round"
           />
         </svg>
-        <h1
-          class="wrap-title"
-          style="font-weight: 500; font-size: 1.2em; color: #777777"
-        >
+        <h1 class="wrap-title">
           <span style="font-size: 1.5em">1</span>st.
           <span style="font-size: 1.5em; color: #9979c1">몽상가</span>처럼
           상상하기
         </h1>
-        <h2
-          class="wrap-txt"
-          style="font-weight: 500; font-size: 1em; color: #777777"
-        >
+        <h2 class="wrap-txt">
           <p>
             생각을 나누고 질문하는 것은 회의에 있어서 가장 중요한 부분이라고
             생각합니다.
@@ -80,18 +77,12 @@
             stroke-linejoin="round"
           />
         </svg>
-        <h1
-          class="wrap-title"
-          style="font-weight: 500; font-size: 1.2em; color: #777777"
-        >
+        <h1 class="wrap-title">
           <span style="font-size: 1.5em">2</span>nd.
           <span style="font-size: 1.5em; color: #799ac1">완벽주의자</span>처럼
           계획하기
         </h1>
-        <h2
-          class="wrap-txt"
-          style="font-weight: 500; font-size: 1em; color: #777777"
-        >
+        <h2 class="wrap-txt">
           <p>계획은 신경써야하는 부분이 많습니다.</p>
           <p>그러므로 우리는 철저하게 그리고 치밀하게 계획해야 합니다.</p>
           <p>그러나 모든 일들이 다 계획대로 흘러가는 것 또한 아닙니다.</p>
@@ -131,18 +122,12 @@
             stroke-linejoin="round"
           />
         </svg>
-        <h1
-          class="wrap-title"
-          style="font-weight: 500; font-size: 1.2em; color: #777777"
-        >
+        <h1 class="wrap-title">
           <span style="font-size: 1.5em">3</span>rd.
           <span style="font-size: 1.5em; color: #7ac179">탐험가</span>처럼
           행동하기
         </h1>
-        <h2
-          class="wrap-txt"
-          style="font-weight: 500; font-size: 1em; color: #777777"
-        >
+        <h2 class="wrap-txt">
           <p>새로운 계획이 언제나 익숙한 것들로만 이루어질 수는 없습니다.</p>
           <p>
             익숙하지 않은 도구와 새로운 기술에 대해 연구하고 학습하는 과정을
@@ -171,17 +156,11 @@
             stroke-linejoin="round"
           />
         </svg>
-        <h1
-          class="wrap-title"
-          style="font-weight: 500; font-size: 1.2em; color: #777777"
-        >
+        <h1 class="wrap-title">
           <span style="font-size: 1.5em">4</span>st.
           <span style="font-size: 1.5em; color: #c1a979">프로</span>처럼 일하기
         </h1>
-        <h2
-          class="wrap-txt"
-          style="font-weight: 500; font-size: 1em; color: #777777"
-        >
+        <h2 class="wrap-txt">
           <p>
             여러가지 프로젝트를 진행하면서 프로젝트 하나하나에 영혼을 담고
             최선을 다해서 고민합니다.
@@ -207,7 +186,10 @@
       <div class="wrap-devTalkBox">
         <talkBoxLeft>
           <template #profileImg>
-            <img src="@/assets/info/JeongSeongHwa.png" />
+            <img
+              class="profile-img-size"
+              src="@/assets/info/JeongSeongHwa.png"
+            />
           </template>
           <template #profileName>
             <span class="profileNameLeft">정성화</span>
@@ -234,7 +216,10 @@
       <div class="wrap-devTalkBox">
         <talkBoxRight>
           <template #profileImg>
-            <img src="@/assets/info/LeeByeongJun.png" />
+            <img
+              class="profile-img-size"
+              src="@/assets/info/LeeByeongJun.png"
+            />
           </template>
           <template #profileName>
             <span class="profileNameRight">이병준</span>
@@ -262,7 +247,7 @@
       <div class="wrap-devTalkBox">
         <talkBoxLeft>
           <template #profileImg>
-            <img src="@/assets/info/KimTaeHo.png" />
+            <img class="profile-img-size" src="@/assets/info/KimTaeHo.png" />
           </template>
           <template #profileName>
             <span class="profileNameLeft">김태호</span>
@@ -293,13 +278,13 @@
 }
 .topBanner {
   width: 100%;
-  height: 544px;
+  padding: 0px;
   background-color: #ddf1ff;
 }
 .wrap-values {
   display: inline-flex;
-  height: 100%;
   padding: 0px;
+  margin: 0px auto;
   list-style: none;
 
   flex-direction: row;
@@ -309,18 +294,15 @@
   justify-content: center;
 }
 .value img {
-  width: 400px;
-  height: 100%;
   filter: grayscale(100%);
   transition: 0.25s;
 }
-.value:hover img {
+.value img:hover {
   filter: grayscale(0%);
 }
 .mainBanner {
   width: 100%;
   background: border-box;
-  padding: 100px 200px;
 }
 .wrap-contents {
   display: inline-flex;
@@ -329,18 +311,25 @@
 
   flex-direction: column;
   flex-wrap: nowrap;
-  /*flex-flow: column nowrap;*/
+  /*flex-flow: column wrap;*/
 
   justify-content: space-between;
 }
 .contents {
-  width: 800px;
-  flex-basis: 400px;
+  width: 960px;
   padding: 50px;
   margin: 50px auto;
 }
 .wrap-title {
   margin: 20px;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: #777777;
+}
+.wrap-txt {
+  font-weight: 500;
+  font-size: 1em;
+  color: #777777;
 }
 .wrap-txt p {
   margin: 10px;
@@ -348,14 +337,13 @@
 .devTalkBanner {
   display: inline-block;
   width: 100%;
-  padding: 50px 200px;
+  padding: 5% 10%;
   background-image: url(@/assets/info/devInfo.jpg);
   background-size: cover;
 }
 .wrap-devTalkTitle {
   display: flex;
   width: 100%;
-  height: 100px;
 
   flex-direction: column;
   flex-wrap: nowrap;
@@ -386,6 +374,7 @@
 .wrap-devTalkBox {
   display: inline-block;
   width: 100%;
+  margin: 5% 0%;
 }
 .profileNameLeft {
   float: left;
@@ -416,6 +405,55 @@
   text-decoration: none;
   margin-left: 10px;
   font-weight: 600;
+}
+
+/*960px 이하*/
+@media screen and (max-width: 960px) {
+  .value img {
+    width: 100%;
+  }
+  .contents {
+    width: 100%;
+    padding: 5%;
+  }
+  .devTalkBanner {
+    padding: 5% 5%;
+  }
+  .devTalkTitle {
+    font-size: 1.2em;
+    padding: 12px 24px;
+  }
+}
+
+/*640px 이하*/
+@media screen and (max-width: 640px) {
+  .wrap-values {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .value {
+    width: 50%;
+  }
+  .profile-img-size {
+    width: 100%;
+  }
+  .contents svg {
+    width: 120px;
+    height: 120px;
+  }
+  .wrap-title {
+    font-size: 90%;
+  }
+  .wrap-txt {
+    font-size: 90%;
+  }
+}
+
+/*480px 이하*/
+@media screen and (max-width: 480px) {
+  .value {
+    width: 100%;
+  }
 }
 </style>
 <script>
