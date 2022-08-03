@@ -9,13 +9,27 @@
   <div id="notice_contents_body">
     <div id="notice_contents_ct">
       <div class="notice_card_ct">
-        <div></div>
+        <div class="notice_card_img"></div>
+        <div class="notice_contents_ct">
+          <p class="notice_contents_title">공지 타이틀</p>
+          <p class="notice_contents_subtitle">프로젝트 서브 타이틀 적는 곳</p>
+        </div>
       </div>
-      <div class="notice_card_ct"></div>
-      <div class="notice_card_ct"></div>
-      <div class="notice_card_ct"></div>
-      <div class="notice_card_ct"></div>
-      <div class="notice_card_ct"></div>
+      <div class="notice_card_ct">
+        <div class="notice_card_img"></div>
+      </div>
+      <div class="notice_card_ct">
+        <div class="notice_card_img"></div>
+      </div>
+      <div class="notice_card_ct">
+        <div class="notice_card_img"></div>
+      </div>
+      <div class="notice_card_ct">
+        <div class="notice_card_img"></div>
+      </div>
+      <div class="notice_card_ct">
+        <div class="notice_card_img"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -73,7 +87,30 @@
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
-@media (max-width: 1110px) {
+.notice_card_img {
+  position: relative;
+  top: -50px;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+  background-color: #ababab;
+  border-radius: 10px;
+}
+.notice_contents_ct {
+  position: relative;
+  top: -25px;
+  width: 100%;
+  height: 75px;
+  background-color: salmon;
+}
+.notice_contents_title {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+}
+@media (max-width: 960px) {
   #notice_contents_ct {
     max-width: 640px;
     height: 1110px;
