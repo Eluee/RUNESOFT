@@ -6,8 +6,17 @@
       <img src="@/assets/icon/iconBell2.svg" class="noticeIcon" />
     </div>
   </div>
-  <div id="notice_contents_ct">
-    <div class="notice_card_ct"></div>
+  <div id="notice_contents_body">
+    <div id="notice_contents_ct">
+      <div class="notice_card_ct">
+        <div></div>
+      </div>
+      <div class="notice_card_ct"></div>
+      <div class="notice_card_ct"></div>
+      <div class="notice_card_ct"></div>
+      <div class="notice_card_ct"></div>
+      <div class="notice_card_ct"></div>
+    </div>
   </div>
 </template>
 <style scoped>
@@ -36,11 +45,44 @@
   width: 50px;
   display: flex;
 }
+#notice_contents_body {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  background-color: beige;
+}
 #notice_contents_ct {
   position: relative;
-  max-width: 1440px;
-  height: 100px;
-  background-color: beige;
-  margin: auto;
+  max-width: 960px;
+  height: 740px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: aquamarine;
+}
+.notice_card_ct {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  margin-top: 50px;
+  background-color: white;
+  border-color: black;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+@media (max-width: 1110px) {
+  #notice_contents_ct {
+    max-width: 640px;
+    height: 1110px;
+  }
+}
+@media (max-width: 640px) {
+  #notice_contents_ct {
+    max-width: 320px;
+    height: 2220px;
+  }
 }
 </style>
