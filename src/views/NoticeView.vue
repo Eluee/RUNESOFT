@@ -7,32 +7,43 @@
     </div>
   </div>
   <div id="notice_contents_body">
-    <div id="notice_contents_ct">
-      <div class="notice_card_ct">
-        <div class="notice_card_img"></div>
-        <div class="notice_contents_ct">
-          <p class="notice_contents_title">공지 타이틀</p>
-          <p class="notice_contents_subtitle">공지 부가설명을 적는곳</p>
+    <div class="notice_cardlist_ct" :class="{ notice_cardlist_hover: onmouse }">
+      <div v-for="(ntlist, i) in noticelist" :key="i">
+        <div
+          class="notice_card_ct"
+          @mouseover="cardmoveflagenter"
+          @mouseout="cardmoveflagout"
+        >
+          <div class="notice_card_img"></div>
+          <div class="notice_contents_ct">
+            <p class="notice_contents_title">{{ ntlist.title }}</p>
+            <p class="notice_contents_subtitle">{{ ntlist.subtitle }}</p>
+          </div>
         </div>
-      </div>
-      <div class="notice_card_ct">
-        <div class="notice_card_img"></div>
-      </div>
-      <div class="notice_card_ct">
-        <div class="notice_card_img"></div>
-      </div>
-      <div class="notice_card_ct">
-        <div class="notice_card_img"></div>
-      </div>
-      <div class="notice_card_ct">
-        <div class="notice_card_img"></div>
-      </div>
-      <div class="notice_card_ct">
-        <div class="notice_card_img"></div>
       </div>
     </div>
   </div>
 </template>
+<script>
+import NoticeList from "@/script/notice/noticelist.js";
+export default {
+  name: "app",
+  data() {
+    return {
+      noticelist: NoticeList,
+      onmouse: false,
+    };
+  },
+  methods: {
+    cardmoveflagenter() {
+      this.onmouse = true;
+    },
+    cardmoveflagout() {
+      this.onmouse = false;
+    },
+  },
+};
+</script>
 <style scoped>
 #topbar {
   position: absolute;
@@ -46,6 +57,7 @@
   min-height: 230px;
   background-image: url(@/assets/notice/noticebannerimg.png);
   background-size: cover;
+  transition: all 0.5s;
 }
 #notice_icon_ct {
   width: 100%;
@@ -66,12 +78,18 @@
   margin-top: 100px;
   margin-bottom: 30px;
 }
-#notice_contents_ct {
+.notice_cardlist_ct {
   position: relative;
   max-width: 960px;
   height: 680px;
   left: 50%;
   transform: translateX(-50%);
+  transition: 0.5s;
+}
+/*마우스 호버시 가로 50px 새로 100px*/
+.notice_cardlist_hover {
+  max-width: 1010px;
+  height: 1020px;
 }
 .notice_card_ct {
   position: relative;
@@ -84,6 +102,17 @@
   border-color: black;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  transition: all 0.5s;
+}
+.notice_card_ct:hover {
+  width: 350px;
+  height: 400px;
+}
+.notice_card_ct:hover .notice_card_img {
+  width: 300px;
+  height: 210px;
+  top: -10px;
+  left: 25px;
 }
 .notice_card_img {
   position: relative;
@@ -93,6 +122,7 @@
   height: 200px;
   background-color: #ababab;
   border-radius: 10px;
+  transition: all 0.5s;
 }
 .notice_contents_ct {
   position: relative;
@@ -108,18 +138,27 @@
   margin: 0px;
 }
 @media (max-width: 960px) {
-  #notice_contents_ct {
+  .notice_cardlist_ct {
     max-width: 640px;
     height: 1020px;
   }
+  .notice_cardlist_hover {
+    max-width: 690px;
+    height: 1460px;
+  }
   #noticeTopbanner {
     height: 300px;
+    transition: all 0.5s;
   }
 }
-@media (max-width: 640px) {
-  #notice_contents_ct {
+@media (max-width: 690px) {
+  .notice_cardlist_ct {
     max-width: 320px;
     height: 2040px;
+  }
+  .notice_cardlist_hover {
+    max-width: 370px;
+    height: 2140px;
   }
 }
 </style>
