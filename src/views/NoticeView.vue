@@ -84,7 +84,7 @@ export default {
   height: 680px;
   left: 50%;
   transform: translateX(-50%);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 /*마우스 호버시 가로 50px 새로 100px*/
 .notice_cardlist_hover {

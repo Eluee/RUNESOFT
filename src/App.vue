@@ -213,4 +213,21 @@ export default {
   top: 30%;
   left: 200px;
 }
+
+/* Mobile S*/
+@media (max-width: 425px) {
+  .topbar a {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+  }
+  .topbar img,
+  #guestnum {
+    display: none;
+  }
+  .navbar nav a {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+}
 </style>
