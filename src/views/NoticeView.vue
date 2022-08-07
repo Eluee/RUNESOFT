@@ -9,15 +9,17 @@
   <div id="notice_contents_body">
     <div class="notice_cardlist_ct" :class="{ notice_cardlist_hover: onmouse }">
       <div v-for="(ntlist, i) in noticelist" :key="i">
-        <div
-          class="notice_card_ct"
-          @mouseover="cardmoveflagenter"
-          @mouseout="cardmoveflagout"
-        >
-          <div class="notice_card_img"></div>
-          <div class="notice_contents_ct">
-            <p class="notice_contents_title">{{ ntlist.title }}</p>
-            <p class="notice_contents_subtitle">{{ ntlist.subtitle }}</p>
+        <div>
+          <div
+            class="notice_card_ct"
+            @mouseover="cardmoveflagenter"
+            @mouseout="cardmoveflagout"
+          >
+            <div class="notice_card_img"></div>
+            <div class="notice_contents_ct">
+              <p class="notice_contents_title">{{ ntlist.title }}</p>
+              <p class="notice_contents_subtitle">{{ ntlist.subtitle }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -84,7 +86,7 @@ export default {
   height: 680px;
   left: 50%;
   transform: translateX(-50%);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 /*마우스 호버시 가로 50px 새로 100px*/
 .notice_cardlist_hover {
