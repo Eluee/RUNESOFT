@@ -11,7 +11,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active" id="mainslide1">
             <div class="bannerimg">
-              <div class="icon"></div>
+              <img src="@/assets/icon/logo.svg" id="mainlogo" />
               <p>안녕하세요.<br />룬 소프트에 오신 것을 환영합니다.</p>
             </div>
           </div>
@@ -140,14 +140,14 @@
   </div>
 </template>
 <script>
-import Matter from "matter-js";
+//import Matter from "matter-js";
 import NoticeBanner from "@/components/noticeBanner.vue";
 
 export default {
   components: {
     NoticeBanner,
   },
-  mounted() {
+  /*mounted() {
     var Engine = Matter.Engine,
       Render = Matter.Render,
       Runner = Matter.Runner,
@@ -210,12 +210,17 @@ export default {
       Bodies.rectangle(0, 600, 3000, 10, { isStatic: true }),
       circle,
     ]);
-  },
+  },*/
 };
 </script>
 
 <style scoped>
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap);
+#mainlogo {
+  position: relative;
+  width: 160px;
+  top: 150px;
+}
 #mainslide1 {
   background: url(@/assets/banner/mianbannertestimg1.jpeg);
 }
