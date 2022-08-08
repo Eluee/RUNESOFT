@@ -9,15 +9,12 @@
       >
         <!--슬라이드-->
         <div class="carousel-inner">
-          <div class="carousel-item active" id="mainslide1">
-            <div class="bannerimg">
-              <div class="icon"></div>
-              <p>안녕하세요.<br />룬 소프트에 오신 것을 환영합니다.</p>
-            </div>
+          <div class="carousel-item active">
+            <MainBanner />
           </div>
           <div class="carousel-item" id="mainslide2">
             <div class="bannerimg">
-              <NoticeBanner></NoticeBanner>
+              <NoticeBanner />
             </div>
           </div>
           <div class="carousel-item">
@@ -27,6 +24,7 @@
           </div>
         </div>
         <!--컨트롤러-->
+        <div></div>
         <div id="controlbar">
           <button
             class="carousel-control-next"
@@ -140,14 +138,16 @@
   </div>
 </template>
 <script>
-import Matter from "matter-js";
-import NoticeBanner from "@/components/noticeBanner.vue";
+//import Matter from "matter-js"; //나중에 작업
+import NoticeBanner from "@/components/main/noticeBanner.vue";
+import MainBanner from "@/components/main/mainBanner.vue";
 
 export default {
   components: {
     NoticeBanner,
+    MainBanner,
   },
-  mounted() {
+  /*mounted() {
     var Engine = Matter.Engine,
       Render = Matter.Render,
       Runner = Matter.Runner,
@@ -210,24 +210,23 @@ export default {
       Bodies.rectangle(0, 600, 3000, 10, { isStatic: true }),
       circle,
     ]);
-  },
+  },*/
 };
 </script>
 
 <style scoped>
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap);
-#mainslide1 {
-  background: url(@/assets/banner/mianbannertestimg1.jpeg);
+.bannerbackground {
+  position: absolute;
+  max-width: 1440px;
+  overflow: hidden;
+}
+.card {
+  max-width: 1440px;
+  height: 600px;
 }
 #mainslide2 {
   background: url(@/assets/banner/mianbannertestimg1.jpeg);
-}
-#controlbar {
-  position: absolute;
-  top: 50%;
-  z-index: 4;
-  width: 1440px;
-  height: 60px;
 }
 .carousel-inner p {
   color: white;
@@ -246,7 +245,7 @@ export default {
   position: absolute;
   stroke: white;
   transition: all 0.5s;
-  right: 130px;
+  right: 30%;
 }
 .right-arrow:hover {
   transform: translateX(25px);
@@ -257,7 +256,7 @@ export default {
   position: absolute;
   stroke: white;
   transition: all 0.5s;
-  left: 130px;
+  left: 30%;
 }
 .left-arrow:hover {
   transform: translateX(-25px);
@@ -266,7 +265,7 @@ export default {
 }
 .mainbannerct {
   position: relative;
-  width: 1440px;
+  max-width: 1440px;
   height: 600px;
   margin: 0 auto;
   top: -56.4px;
@@ -277,7 +276,7 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.49);
-  width: 1440px;
+  max-width: 1440px;
   height: 600px;
 }
 .bannerimg p {
