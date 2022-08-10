@@ -13,12 +13,12 @@
             <MainBanner />
           </div>
           <div class="carousel-item" id="mainslide2">
-            <div class="bannerimg">
+            <div class="banner-img">
               <NoticeBanner />
             </div>
           </div>
           <div class="carousel-item">
-            <div class="bannerimg">
+            <div class="banner-img">
               <p>3 page</p>
             </div>
           </div>
@@ -90,8 +90,8 @@
           </button>
         </div>
       </div>
-      <div ref="matterjs" id="canvas"></div>
     </div>
+    <div ref="matterjs" id="canvas"></div>
     <!-- 컨텐츠 시작 -->
     <div class="contents">
       <p class="contents_head_1">소규모로 구성된 팀</p>
@@ -266,11 +266,10 @@ export default {
 .mainbannerct {
   position: relative;
   max-width: 1440px;
-  height: 600px;
+  height: 700px;
   margin: 0 auto;
-  top: -56.4px;
 }
-.bannerimg {
+.banner-img {
   position: relative;
   z-index: 1;
   left: 50%;
@@ -279,7 +278,7 @@ export default {
   max-width: 1440px;
   height: 600px;
 }
-.bannerimg p {
+.banner-img p {
   position: relative;
   color: white;
   font-family: "Noto Sans";
