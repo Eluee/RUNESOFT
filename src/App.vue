@@ -3,9 +3,6 @@
     <!--overflow-x: hidden 가로 공백 스크롤 숨기기-->
     <div v-if="width > 425"><ResolutionWeb /></div>
     <div v-else><ResolutionMobile /></div>
-    <div>
-      <p>{{ width }} : width {{ height }} : height</p>
-    </div>
   </div>
 </template>
 
@@ -23,6 +20,7 @@ export default {
   mounted() {
     // console.log("ready...");
     window.addEventListener("resize", this.handleResize);
+    this.width = window.innerWidth;
   },
   beforeUnmount() {
     // console.log("beforeDestroy...");
