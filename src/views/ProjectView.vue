@@ -74,37 +74,40 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="project3">
-      <!-- vue html 반복문 문법 사용 -->
-      <!-- value: menu의 각 원소를 가져옴 , index: 0부터 1씩 증가하는 정수  :key=횟수 가 들어가는것이 일반적임 -->
-      <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
+  <div class="project3">
+    <!-- vue html 반복문 문법 사용 -->
+    <!-- value: menu의 각 원소를 가져옴 , index: 0부터 1씩 증가하는 정수  :key=횟수 가 들어가는것이 일반적임 -->
+    <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
 
-      <div v-for="(dbdata, index) in dbdata" :key="index">
-        <div class="projectbox" style="float: left">
-          <div class="project_name">
-            <img class="image" :src="dbdata.image" />
-            <h3 class="project_name_text" :style="atr" @click="view = ture">
-              프로젝트 명: {{ dbdata.title }}
-            </h3>
-            <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
-            <div class="projectnamebox">
-              <div class="project_explain_text">
-                <p>{{ dbdata.content }}</p>
-              </div>
+    <div v-for="(dbdata, index) in dbdata" :key="index">
+      <div class="projectbox" style="float: left">
+        <div class="project_name">
+          <img class="image" :src="dbdata.image" />
+          <h3 class="project_name_text" :style="atr" @click="view = ture">
+            프로젝트 명: {{ dbdata.title }}
+          </h3>
+          <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
+          <div class="projectnamebox">
+            <div class="project_explain_text">
+              <p>{{ dbdata.content }}</p>
             </div>
-            <div class="d_t_name2">
-              <h3>개발 도구</h3>
-              <div class="line3"></div>
-              <img class="image2" :src="dbdata.image2" />
-            </div>
-            <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
-            <div class="love">
-              <button @click="increase(index)">프로젝트 좋아요</button>
-              <span> 좋아요 수 : {{ num[index] }} </span>
-            </div>
-            <!--@click vue 문법임 -->
           </div>
+          <div class="d_t_name2">
+            <p>개발 도구</p>
+            <div class="line3"></div>
+            <img class="image2" :src="dbdata.image2" />
+          </div>
+          <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
+          <div class="love">
+            <button @click="increase(index)">좋아요</button>
+            <span>
+              <br />
+              좋아요 수 : {{ num[index] }}
+            </span>
+          </div>
+          <!--@click vue 문법임 -->
         </div>
       </div>
     </div>
@@ -157,6 +160,7 @@
   width: 1440px;
   height: 460px;
 }
+
 .position_box {
   position: absolute;
   z-index: 1;
@@ -294,6 +298,8 @@
   position: relative;
   width: 1440px;
   height: 4000px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .projectbox {
   background-color: white;
@@ -372,7 +378,103 @@
 .love {
   position: absolute;
   top: 90%;
-  left: 40%;
+  left: 75%;
+}
+
+@media (max-width: 426px) {
+  .project_1 {
+    display: none;
+  }
+  .project_2 {
+    display: none;
+  }
+  .project3 {
+    position: relative;
+    width: 425px;
+    height: 2000px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .projectbox {
+    background-color: white;
+    position: relative;
+    width: 200px;
+    height: 250px;
+    left: 4%;
+  }
+
+  .project_name {
+    background-color: aliceblue;
+    width: 170px;
+    height: 220px;
+    position: absolute;
+  }
+
+  .program_name a {
+    padding: 20px;
+  }
+
+  .image {
+    position: absolute;
+    width: 170px;
+    height: 80px;
+    left: 0%;
+    top: 0%;
+  }
+  .project_name_text {
+    position: absolute;
+    z-index: 1;
+    top: 38.3%;
+    left: 3%;
+    font-size: 10px;
+  }
+  .projectnamebox {
+    position: absolute;
+    z-index: 2;
+    width: 170px;
+    height: 70px;
+    top: 45%;
+    left: 0%;
+    background-color: rgb(252, 252, 250);
+  }
+
+  .project_explain_text {
+    position: absolute;
+    top: 3.5%;
+    left: 3%;
+    font-size: 4px;
+  }
+  .d_t_name2 {
+    position: absolute;
+    z-index: 1;
+    left: 4%;
+    top: 78%;
+    font-size: 5px;
+  }
+  .line3 {
+    position: absolute;
+    z-index: 1;
+    width: 150px;
+    height: 1px;
+    border-top: 1.33px solid #cccccc;
+    left: 3%;
+    top: 50%;
+  }
+
+  .image2 {
+    position: absolute;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    left: 5%;
+    top: 63%;
+  }
+  .love {
+    position: absolute;
+    top: 90%;
+    left: 75%;
+  }
 }
 </style>
 
@@ -380,6 +482,7 @@
 import projectg from "@/script/project/projectg.js";
 // js 데이터를 불러와서 사용할때
 
+//모바일에서 볼 때
 export default {
   data() {
     //데이터 바인딩 데이터를 사용할때 오브젝트 형식 {} 으로 저장
@@ -394,6 +497,7 @@ export default {
       rp_num: 1,
     };
   },
+
   methods: {
     increase(index) {
       this.num[index]++;
