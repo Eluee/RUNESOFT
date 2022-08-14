@@ -121,7 +121,6 @@
 }
 .project_1 {
   position: relative;
-  z-index: 1;
   background-color: gray;
   width: 1440px;
   height: 350px;
@@ -131,7 +130,6 @@
   left: 200px;
   top: 20px;
   position: absolute;
-  z-index: 1;
   color: black;
   font-size: 27px;
 }
@@ -140,12 +138,10 @@
   top: 220px;
   color: black;
   position: absolute;
-  z-index: 1;
 }
 
 .project_img1 {
   position: absolute;
-  z-index: 1;
   width: 429px;
   height: 268px;
   top: 50px;
@@ -153,13 +149,11 @@
 }
 .project_2 {
   position: relative;
-  z-index: 2;
   width: 1440px;
   height: 460px;
 }
 .position_box {
   position: absolute;
-  z-index: 1;
   width: 550px;
   height: 400px;
   top: 30px;
@@ -168,7 +162,6 @@
 }
 .n_project {
   position: absolute;
-  z-index: 2;
   background-color: aliceblue;
   width: 300px;
   height: 290px;
@@ -189,19 +182,16 @@
   left: 20%;
   color: azure;
   text-align: left;
-  z-index: 1;
 }
 .n_project_text2 {
   position: absolute;
   color: black;
   font-size: 30px;
-  z-index: 2;
   right: 3%;
   top: 82%;
 }
 .c_project {
   position: absolute;
-  z-index: 2;
   left: 325px;
   top: 20px;
 }
@@ -216,18 +206,15 @@
   transform: translate(50%, -50%);
   color: aliceblue;
   top: 60%;
-  z-index: 1;
 }
 .c_project_text2 {
   position: absolute;
   color: aliceblue;
   top: 80%;
   left: 85%;
-  z-index: 1;
 }
 .r_project {
   position: absolute;
-  z-index: 2;
   left: 325px;
   top: 170px;
 }
@@ -240,18 +227,15 @@
   color: aliceblue;
   transform: translate(27%, -150%);
   top: 85%;
-  z-index: 1;
 }
 .r_project_text2 {
   position: absolute;
   color: aliceblue;
   top: 80%;
   left: 85%;
-  z-index: 1;
 }
 .search {
   position: absolute;
-  z-index: 2;
   top: 315px;
   left: 20px;
 }
@@ -265,14 +249,12 @@
 .search_text {
   position: absolute;
   font-size: 60px;
-  z-index: 1;
   left: 47%;
   top: -15px;
   transition: all 0.5s;
 }
 #search_text_bar {
   position: absolute;
-  z-index: 1;
   width: 350px;
   height: 25px;
   left: 50%;
@@ -323,7 +305,6 @@
 }
 .project_name_text {
   position: absolute;
-  z-index: 1;
   top: 42%;
   left: 3%;
   font-size: 20px;
@@ -337,14 +318,12 @@
 }
 .d_t_name2 {
   position: absolute;
-  z-index: 1;
   left: 4%;
   top: 78%;
   font-size: 20px;
 }
 .line3 {
   position: absolute;
-  z-index: 1;
   width: 370px;
   height: 1px;
   border-top: 1.33px solid #cccccc;
@@ -353,7 +332,6 @@
 }
 .projectnamebox {
   position: absolute;
-  z-index: 2;
   width: 400px;
   height: 160px;
   top: 48%;
@@ -363,7 +341,6 @@
 
 .image2 {
   position: absolute;
-  z-index: 1;
   width: 50px;
   height: 50px;
   left: 5%;
