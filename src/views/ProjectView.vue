@@ -1,4 +1,7 @@
 <template>
+  <!-- 모바일 -->
+  <div class="mobile_banner"></div>
+  <!-- 컴푸터-->
   <div class="project">
     <div class="project_1">
       <div class="project_text">
@@ -77,6 +80,12 @@
   </div>
 
   <div class="project3">
+    <div class="n_p">
+      <div class="n">
+        <p>새 프로젝트</p>
+      </div>
+      <div class="n_line"></div>
+    </div>
     <!-- vue html 반복문 문법 사용 -->
     <!-- value: menu의 각 원소를 가져옴 , index: 0부터 1씩 증가하는 정수  :key=횟수 가 들어가는것이 일반적임 -->
     <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
@@ -100,14 +109,75 @@
             <img class="image2" :src="dbdata.image2" />
           </div>
           <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
-          <div class="love">
-            <button @click="increase(index)">좋아요</button>
-            <span>
-              <br />
-              좋아요 수 : {{ num[index] }}
-            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project4">
+    <div class="c_p">
+      <div class="c">
+        <p>완성 프로젝트</p>
+      </div>
+      <div class="c_line"></div>
+    </div>
+    <!-- vue html 반복문 문법 사용 -->
+    <!-- value: menu의 각 원소를 가져옴 , index: 0부터 1씩 증가하는 정수  :key=횟수 가 들어가는것이 일반적임 -->
+    <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
+
+    <div v-for="(dbdata2, index) in dbdata2" :key="index">
+      <div class="projectbox" style="float: left">
+        <div class="project_name">
+          <img class="image" :src="dbdata2.image" />
+          <h3 class="project_name_text" :style="atr" @click="view = ture">
+            프로젝트 명: {{ dbdata2.title }}
+          </h3>
+          <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
+          <div class="projectnamebox">
+            <div class="project_explain_text">
+              <p>{{ dbdata2.content }}</p>
+            </div>
           </div>
-          <!--@click vue 문법임 -->
+          <div class="d_t_name2">
+            <p>개발 도구</p>
+            <div class="line3"></div>
+            <img class="image2" :src="dbdata2.image2" />
+          </div>
+          <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project5">
+    <div class="r_p">
+      <div class="r">
+        <p>계획중인 프로젝트</p>
+      </div>
+      <div class="r_line"></div>
+    </div>
+    <!-- vue html 반복문 문법 사용 -->
+    <!-- value: menu의 각 원소를 가져옴 , index: 0부터 1씩 증가하는 정수  :key=횟수 가 들어가는것이 일반적임 -->
+    <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
+
+    <div v-for="(dbdata3, index) in dbdata3" :key="index">
+      <div class="projectbox" style="float: left">
+        <div class="project_name">
+          <img class="image" :src="dbdata3.image" />
+          <h3 class="project_name_text" :style="atr" @click="view = ture">
+            프로젝트 명: {{ dbdata3.title }}
+          </h3>
+          <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
+          <div class="projectnamebox">
+            <div class="project_explain_text">
+              <p>{{ dbdata3.content }}</p>
+            </div>
+          </div>
+          <div class="d_t_name2">
+            <p>개발 도구</p>
+            <div class="line3"></div>
+            <img class="image2" :src="dbdata3.image2" />
+          </div>
+          <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
         </div>
       </div>
     </div>
@@ -297,7 +367,7 @@
 .project3 {
   position: relative;
   width: 1440px;
-  height: 4000px;
+  height: 720px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -306,6 +376,80 @@
   position: relative;
   width: 450px;
   height: 620px;
+  left: 4%;
+}
+
+.n_p {
+  position: relative;
+  width: 1440px;
+  height: 70px;
+}
+.n {
+  position: absolute;
+  top: 0%;
+  left: 6%;
+  font-size: xx-large;
+}
+.n_line {
+  position: absolute;
+  width: 1100px;
+  height: 1px;
+  background-color: #cccccc;
+  top: 70%;
+  left: 4%;
+}
+
+.project4 {
+  position: relative;
+  width: 1440px;
+  height: 720px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.c_p {
+  position: relative;
+  width: 1440px;
+  height: 70px;
+}
+.c {
+  position: absolute;
+  top: 0%;
+  left: 6%;
+  font-size: xx-large;
+}
+.c_line {
+  position: absolute;
+  width: 1100px;
+  height: 1px;
+  background-color: #cccccc;
+  top: 70%;
+  left: 4%;
+}
+
+.project5 {
+  position: relative;
+  width: 1440px;
+  height: 720px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.r_p {
+  position: relative;
+  width: 1440px;
+  height: 70px;
+}
+.r {
+  position: absolute;
+  top: 0%;
+  left: 6%;
+  font-size: xx-large;
+}
+.r_line {
+  position: absolute;
+  width: 1100px;
+  height: 1px;
+  background-color: #cccccc;
+  top: 70%;
   left: 4%;
 }
 
@@ -375,11 +519,6 @@
   left: 5%;
   top: 120%;
 }
-.love {
-  position: absolute;
-  top: 90%;
-  left: 75%;
-}
 
 @media (max-width: 426px) {
   .project_1 {
@@ -388,12 +527,92 @@
   .project_2 {
     display: none;
   }
+  .mobile_banner {
+    position: relative;
+    width: 425px;
+    height: 50px;
+    background-image: "@/assets/banner/project/3d.jpg";
+  }
   .project3 {
     position: relative;
     width: 425px;
-    height: 2000px;
+    height: 550px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .n_p {
+    position: relative;
+    width: 380px;
+    height: 50px;
+  }
+  .n {
+    position: absolute;
+    top: 0%;
+    left: 6%;
+    font-size: large;
+  }
+  .n_line {
+    position: absolute;
+    width: 363px;
+    height: 1px;
+    background-color: #cccccc;
+    top: 70%;
+    left: 4%;
+  }
+
+  .project4 {
+    position: relative;
+    width: 425px;
+    height: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .c_p {
+    position: relative;
+    width: 380px;
+    height: 50px;
+  }
+  .c {
+    position: absolute;
+    top: 0%;
+    left: 6%;
+    font-size: large;
+  }
+  .c_line {
+    position: absolute;
+    width: 363px;
+    height: 1px;
+    background-color: #cccccc;
+    top: 70%;
+    left: 4%;
+  }
+
+  .project5 {
+    position: relative;
+    width: 425px;
+    height: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .r_p {
+    position: relative;
+    width: 380px;
+    height: 50px;
+  }
+  .r {
+    position: absolute;
+    top: 0%;
+    left: 6%;
+    font-size: large;
+  }
+  .r_line {
+    position: absolute;
+    width: 363px;
+    height: 1px;
+    background-color: #cccccc;
+    top: 70%;
+    left: 4%;
   }
 
   .projectbox {
@@ -470,16 +689,13 @@
     left: 5%;
     top: 63%;
   }
-  .love {
-    position: absolute;
-    top: 90%;
-    left: 75%;
-  }
 }
 </style>
 
 <script>
-import projectg from "@/script/project/projectg.js";
+import n_p from "@/script/project/n_p.js";
+import c_p from "@/script/project/c_p.js";
+import r_p from "@/script/project/r_p.js";
 // js 데이터를 불러와서 사용할때
 
 //모바일에서 볼 때
@@ -487,13 +703,14 @@ export default {
   data() {
     //데이터 바인딩 데이터를 사용할때 오브젝트 형식 {} 으로 저장
     return {
-      dbdata: projectg, // 데이터 바인딩을 사용하여 데이터를 주입 할 수 있음
+      dbdata: n_p,
+      dbdata2: c_p,
+      dbdata3: r_p, // 데이터 바인딩을 사용하여 데이터를 주입 할 수 있음
       view: false,
-      num: [0, 0, 0, 0],
       atr: "color : blue", // 속성 또한 바인딩 가능
 
-      np_num: 0,
-      cp_num: 0,
+      np_num: 3,
+      cp_num: 2,
       rp_num: 1,
     };
   },
