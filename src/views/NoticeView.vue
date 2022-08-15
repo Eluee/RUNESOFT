@@ -1,6 +1,7 @@
 <template>
-  <div id="topbar"></div>
-  <div id="noticeTopbanner"></div>
+  <div class="notice-banner-ct">
+    <img class="notice-top-banner" src="@/assets/notice/noticebanner.png" />
+  </div>
   <div id="notice_icon_ct">
     <div id="iconList">
       <img src="@/assets/icon/iconBell2.svg" class="noticeIcon" />
@@ -47,18 +48,19 @@ export default {
 };
 </script>
 <style scoped>
-#topbar {
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  height: 56px;
-  background-color: black;
+.notice-banner-ct {
+  position: relative;
+  width: 1440px;
+  height: 300px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: beige;
+  overflow: hidden;
 }
-#noticeTopbanner {
-  width: 100%;
-  min-height: 230px;
-  background-image: url(@/assets/notice/noticebannerimg.png);
-  background-size: cover;
+.notice-top-banner {
+  position: absolute;
+  transform: translate(-50%);
+  top: -100px;
   transition: all 0.5s;
 }
 #notice_icon_ct {
@@ -152,7 +154,7 @@ export default {
   margin: 0px;
 }
 /* 테블릿 */
-@media (max-width: 960px) {
+@media (max-width: 1010px) {
   .notice_cardlist_ct {
     max-width: 640px;
     height: 1320px;
@@ -172,15 +174,20 @@ export default {
     margin: auto;
     margin-top: 30px;
     margin-bottom: 10px;
+    height: 300px;
     float: none;
+  }
+  .assist_card_ct:hover {
+    height: 400px;
+    width: 350px;
   }
   .notice_cardlist_ct {
     max-width: 320px;
-    height: 2600px;
+    height: 2000px;
   }
   .notice_cardlist_hover {
     max-width: 370px;
-    height: 2600px;
+    height: 2100px;
   }
 }
 /* 모바일 */
@@ -191,6 +198,12 @@ export default {
     width: 100%;
     /* hover 이벤트 제거 */
     pointer-events: none;
+  }
+  .notice_cardlist_ct {
+    height: 2600px;
+  }
+  .assist_card_ct {
+    height: 400px;
   }
   .notice_card_ct {
     width: 100%;
