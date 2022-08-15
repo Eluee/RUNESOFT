@@ -14,6 +14,7 @@
     "pathseg": "^1.2.1",
     "poly-decomp": "^0.3.0",
     "vue": "^3.2.37",
+    "vue-mobile-detection": "^2.0.1",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },
