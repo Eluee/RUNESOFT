@@ -1,5 +1,4 @@
 <template>
-  <meta name="viewport" content="width=device-width,initial-scale=0.1" />
   <div id="navBg"></div>
   <div class="topBanner">
     <ul class="wrap-values">
