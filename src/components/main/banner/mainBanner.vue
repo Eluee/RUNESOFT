@@ -39,4 +39,22 @@ p {
   font-size: 35px;
   line-height: 50px;
 }
+
+@media (max-width: 600px) {
+  .main-logo {
+    width: 130px;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+  p {
+    line-height: 30px;
+    font-size: 25px;
+    top: 280px;
+  }
+}
+@media (max-width: 335px) {
+  p {
+    font-size: 20px;
+  }
+}
 </style>
