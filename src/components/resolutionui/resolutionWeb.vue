@@ -3,6 +3,33 @@
     <router-link to="/" class="top-logo">RUNE SOFT</router-link>
     <img src="@/assets/icon/users.svg" />
     <p class="guest-num">{{ guest }}</p>
+    <div class="search-bar" type="text" placeholder="fjw">
+      <input
+        class="search-input"
+        placeholder="통합 검색"
+        v-on:keyup.enter="totalsearch()"
+      />
+      <svg
+        viewBox="0 0 12 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="search-icon"
+        v-on:click="totalsearch()"
+      >
+        <path
+          d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+          stroke="#191919"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M10.5 10.5L8.325 8.32501"
+          stroke="#191919"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
     <div class="nav-bar">
       <nav>
         <router-link to="/">HOME</router-link>
@@ -36,6 +63,11 @@ export default {
     return {
       guest: 10,
     };
+  },
+  methods: {
+    totalsearch() {
+      this.$router.push("totalsearch");
+    },
   },
 };
 </script>
@@ -114,6 +146,35 @@ export default {
   font-style: normal;
   font-size: 20px;
   color: #777777;
+}
+
+.search-bar {
+  position: absolute;
+  width: 45%;
+  height: 35px;
+  background-color: #e9f0f2;
+  left: 50%;
+  border-radius: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search-icon {
+  position: absolute;
+  width: 25px;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.search-input {
+  position: absolute;
+  top: 50%;
+  width: calc(100% - 80px);
+  right: 60px;
+  border: none;
+  outline: none;
+  background: none;
+  text-align: right;
+  transform: translateY(-50%);
 }
 .nav-bar nav {
   position: relative;
