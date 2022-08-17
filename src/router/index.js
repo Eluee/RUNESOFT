@@ -30,6 +30,11 @@ const routes = [
     name: "notice",
     component: () => import("../views/NoticeView.vue"),
   },
+  {
+    path: "/totalsearch",
+    name: "totalsearch",
+    component: () => import("../views/TotalSearchView.vue"),
+  },
 ];
 
 const router = createRouter({
