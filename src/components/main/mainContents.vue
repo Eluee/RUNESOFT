@@ -36,7 +36,7 @@
   </div>
   <div class="contents-ct-end">
     <p class="conhd-text">이제부터 시작합니다!</p>
-    <p class="conex-text">우리들의 꿈을 위하여</p>
+    <p class="conex-text">새로운 꿈을 실현하기 위한 여정</p>
     <img
       src="@/assets/maincontents/mainpagecontents4.png"
       class="contents4-img"
@@ -248,6 +248,24 @@
 
   .conhd-text {
     font-size: 36px;
+  }
+}
+@media (max-width: 320px) {
+  .user-1,
+  .user-2,
+  .user-3 {
+    width: 130px;
+  }
+
+  .user-1 {
+    left: calc(50% - 100px);
+  }
+
+  .user-3 {
+    left: calc(50% + 100px);
+  }
+  .conhd-text {
+    font-size: 30px;
   }
 }
 </style>
