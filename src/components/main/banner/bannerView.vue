@@ -23,7 +23,7 @@
       </div>
       <!--컨트롤러-->
       <div></div>
-      <div id="controlbar">
+      <div class="control-bar">
         <button
           class="carousel-control-next"
           type="button"
@@ -108,6 +108,7 @@ export default {
 #mainslide2 {
   background: url(@/assets/banner/mianbannertestimg1.jpeg);
 }
+
 .carousel-inner p {
   color: white;
 }
@@ -118,13 +119,11 @@ export default {
   transition: all 0.5s;
   right: 30%;
 }
-
 .right-arrow:hover {
   transform: translateX(25px);
   transition: all 0.5s;
   transition-timing-function: ease;
 }
-
 .left-arrow {
   position: absolute;
   stroke: white;
@@ -163,5 +162,19 @@ export default {
   font-weight: 700;
   font-size: 35px;
   line-height: 50px;
+}
+@media (max-width: 600px) {
+  .right-arrow {
+    bottom: 30px;
+    right: 80%;
+    width: 20px;
+    pointer-events: none;
+  }
+  .left-arrow {
+    bottom: 30px;
+    left: 80%;
+    width: 20px;
+    pointer-events: none;
+  }
 }
 </style>

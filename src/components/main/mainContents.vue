@@ -25,7 +25,8 @@
     <div class="context3-ct">
       <p class="conhd-text">더 좋은 방법은 없을까?</p>
       <p class="conex-text">
-        우리는 더좋은 선택을 하기위해 비판과 사고를 멈추지 않습니다.
+        좋은 방법은 한번에 나오지 않습니다.<br />
+        충분히 생각하며 충분한 수정을 거치고 끈기있게 관리합니다.
       </p>
     </div>
     <img
@@ -34,8 +35,8 @@
     />
   </div>
   <div class="contents-ct-end">
-    <p class="conhd-text">우리의 비전을 향해!</p>
-    <p class="conex-text">우리의 상상을 현실로</p>
+    <p class="conhd-text">이제부터 시작합니다!</p>
+    <p class="conex-text">새로운 꿈을 실현하기 위한 여정</p>
     <img
       src="@/assets/maincontents/mainpagecontents4.png"
       class="contents4-img"
@@ -196,6 +197,75 @@
   }
   .contents3-img {
     top: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .contents-ct,
+  .contents {
+    margin-top: 100px;
+  }
+  .user-1,
+  .user-2,
+  .user-3 {
+    width: 180px;
+  }
+  .user-1 {
+    left: calc(50% - 135px);
+  }
+
+  .user-3 {
+    left: calc(50% + 135px);
+  }
+  .conhd-text {
+    font-size: 40px;
+  }
+  .contents2-img {
+    max-width: 500px;
+  }
+  .contents3-img {
+    max-width: 500px;
+  }
+}
+@media (max-width: 375px) {
+  .contents-ct,
+  .contents {
+    margin-top: 100px;
+  }
+
+  .user-1,
+  .user-2,
+  .user-3 {
+    width: 160px;
+  }
+
+  .user-1 {
+    left: calc(50% - 120px);
+  }
+
+  .user-3 {
+    left: calc(50% + 120px);
+  }
+
+  .conhd-text {
+    font-size: 36px;
+  }
+}
+@media (max-width: 320px) {
+  .user-1,
+  .user-2,
+  .user-3 {
+    width: 130px;
+  }
+
+  .user-1 {
+    left: calc(50% - 100px);
+  }
+
+  .user-3 {
+    left: calc(50% + 100px);
+  }
+  .conhd-text {
+    font-size: 30px;
   }
 }
 </style>

@@ -56,7 +56,7 @@ export default {
 .top-bar {
   position: fixed;
   z-index: 5;
-  height: 40px;
+  height: 50px;
   width: 100%;
   text-align: left;
   background-color: white;
@@ -73,7 +73,7 @@ export default {
   padding-right: 6px;
   width: fit-content;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 19px;
   line-height: 16px;
   color: #9979c1;
 }
@@ -93,17 +93,18 @@ export default {
 }
 .search-bar {
   position: absolute;
-  width: calc(100% - 144px);
-  height: 20px;
+  width: calc(100% - 160px);
+  height: 30px;
   background: #e9f0f2;
-  border-radius: 10px;
-  left: 134px;
+  border-radius: 20px;
+  left: 150px;
 }
 .search-icon {
   position: relative;
   float: right;
   right: 10px;
   top: 50%;
+  width: 15px;
   transform: translateY(-50%);
 }
 
