@@ -1,14 +1,16 @@
 <template>
-  <p>total search page</p>
+  <searchTab></searchTab>
   <searchResort></searchResort>
 </template>
 
 <script>
 import searchResort from "@/components/totalsearch/searchResort.vue";
+import searchTab from "@/components/totalsearch/searchTab.vue";
 
 export default {
-  compononts: {
+  components: {
     searchResort,
+    searchTab,
   },
 };
 </script>
