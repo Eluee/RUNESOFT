@@ -6,7 +6,7 @@
     <div class="search-bar" type="text" placeholder="fjw">
       <input
         class="search-input"
-        placeholder="통합 검색"
+        placeholder="검색"
         v-on:keyup.enter="totalsearch()"
       />
       <svg
