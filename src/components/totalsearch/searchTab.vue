@@ -7,14 +7,31 @@
       </div>
       <button class="search-button">검색</button>
       <div class="fillter-ct">
-        <button class="fillter-icon">
+        <button
+          class="fillter-icon"
+          :class="{ 'fillter-selected': fillter.notice }"
+          v-on:click="fillterselect('notice')"
+        >
+          <p>공지사항</p>
+        </button>
+        <button
+          class="fillter-icon"
+          :class="{ 'fillter-selected': fillter.project }"
+          v-on:click="fillterselect('project')"
+        >
+          <p>프로젝트</p>
+        </button>
+        <button
+          class="fillter-icon"
+          :class="{ 'fillter-selected': fillter.all }"
+          v-on:click="allselect()"
+        >
           <svg
             width="16"
             height="16"
             viewBox="0 0 16 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            class="fillter-svg"
           >
             <path
               d="M14.6666 2H1.33325L6.66658 8.30667V12.6667L9.33325 14V8.30667L14.6666 2Z"
@@ -23,17 +40,59 @@
               stroke-linecap="round"
               stroke-linejoin="round"
               class="fillter-svg"
+              :class="{ 'fillter-svg-selected': fillter.all }"
             />
           </svg>
           <p>전체</p>
         </button>
-        <div class="fillter-icon">
-          <p>테스트</p>
-        </div>
       </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      fillter: {
+        all: true,
+        project: true,
+        notice: true,
+      },
+    };
+  },
+  methods: {
+    // all 필터 버튼
+    allselect() {
+      console.log(this.fillter["all"]);
+      if (this.fillter["all"]) {
+        this.fillter["all"] = false;
+      } else {
+        this.fillter["all"] = true;
+      }
+      for (var key in this.fillter) {
+        this.fillter[key] = this.fillter["all"];
+      }
+    },
+    // 필터 선택 버튼
+    fillterselect(key) {
+      if (this.fillter[key]) {
+        this.fillter[key] = false;
+        this.fillter["all"] = false;
+      } else {
+        this.fillter[key] = true;
+        this.examineallselect();
+      }
+    },
+    examineallselect() {
+      var fillterflag = true;
+      for (var key in this.fillter) {
+        fillterflag = this.fillter[key] && fillterflag;
+      }
+      this.fillter["all"] = fillterflag;
+    },
+  },
+};
+</script>
 
 <style scoped>
 .nav-background {
@@ -85,8 +144,8 @@
   position: absolute;
   top: 80px;
   right: 0px;
-  width: 50%;
-  height: 100px;
+  width: 70%;
+  height: 50px;
 }
 .fillter-icon {
   position: relative;
@@ -100,11 +159,27 @@
   float: right;
   display: flex;
   justify-content: center;
+  transition: all 0.5s;
 }
+.fillter-selected {
+  background: #474d61;
+}
+
 .fillter-icon > * {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   color: #474d61;
+}
+.fillter-selected > * {
+  color: white;
+}
+.fillter-svg {
+  fill: #474d61;
+  stroke: #474d61;
+}
+.fillter-svg-selected {
+  fill: white;
+  stroke: white;
 }
 </style>
