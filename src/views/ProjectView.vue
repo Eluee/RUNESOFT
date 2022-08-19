@@ -197,7 +197,7 @@
   background-color: gray;
   width: 1440px;
   height: 350px;
-  margin-top: -56px;
+  margin-top: 32px;
 }
 .project_text {
   left: 200px;
