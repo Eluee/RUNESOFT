@@ -10,7 +10,7 @@
         <div class="carousel-item active">
           <MainBanner />
         </div>
-        <div class="carousel-item" id="mainslide2">
+        <div class="carousel-item">
           <div class="banner-img">
             <NoticeBanner />
           </div>
@@ -105,9 +105,6 @@ export default {
 
 <style scoped>
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap);
-#mainslide2 {
-  background: url(@/assets/banner/mianbannertestimg1.jpeg);
-}
 
 .carousel-inner p {
   color: white;
