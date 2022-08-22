@@ -1,5 +1,4 @@
 <template>
-  <div id="navBg"></div>
   <div class="topBanner">
     <ul class="wrap-values">
       <li class="value">
@@ -269,13 +268,6 @@
   </div>
 </template>
 <style scoped>
-#navBg {
-  position: absolute;
-  width: 100%;
-  height: 56px;
-  top: 50px;
-  background: black;
-}
 .topBanner {
   width: 100%;
   padding: 0px;
@@ -319,6 +311,7 @@
   width: 960px;
   padding: 50px;
   margin: 50px auto;
+  word-break: keep-all;
 }
 .wrap-title {
   margin: 20px;
@@ -374,7 +367,7 @@
 .wrap-devTalkBox {
   display: inline-block;
   width: 100%;
-  margin: 5% 0%;
+  margin-top: 5%;
 }
 .profileNameLeft {
   float: left;
@@ -388,11 +381,13 @@
   color: #3d3d3d;
   font-weight: 600;
   text-align: left;
+  word-break: keep-all;
 }
 .devTxtRight {
   color: #e7e4e2;
   font-weight: 600;
   text-align: left;
+  word-break: keep-all;
 }
 .gitAccountLeft {
   color: #d9d9d9;
