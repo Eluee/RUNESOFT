@@ -78,106 +78,107 @@
       </div>
     </div>
   </div>
-
-  <div class="project3">
-    <div class="n_p">
-      <div class="n">
-        <p>새 프로젝트</p>
+  <div class="all_project">
+    <div class="project3">
+      <div class="n_p">
+        <div class="n">
+          <p>새 프로젝트</p>
+        </div>
+        <div class="n_line"></div>
       </div>
-      <div class="n_line"></div>
-    </div>
-    <!-- vue html 반복문 문법 사용 -->
-    <!-- value: menu의 각 원소를 가져옴 , index: 0부터 1씩 증가하는 정수  :key=횟수 가 들어가는것이 일반적임 -->
-    <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
+      <!-- vue html 반복문 문법 사용 -->
+      <!-- value: menu의 각 원소를 가져옴 , index: 0부터 1씩 증가하는 정수  :key=횟수 가 들어가는것이 일반적임 -->
+      <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
 
-    <div v-for="(dbdata, index) in dbdata" :key="index">
-      <div class="projectbox" style="float: left">
-        <div class="project_name">
-          <img class="image" :src="dbdata.image" />
-          <h3 class="project_name_text" :style="atr" @click="view = ture">
-            프로젝트 명: {{ dbdata.title }}
-          </h3>
-          <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
-          <div class="projectnamebox">
-            <div class="project_explain_text">
-              <p>{{ dbdata.content }}</p>
+      <div v-for="(dbdata, index) in dbdata" :key="index">
+        <div class="projectbox" style="float: left">
+          <div class="project_name">
+            <img class="image" :src="dbdata.image" />
+            <h3 class="project_name_text" :style="atr" @click="view = ture">
+              프로젝트 명: {{ dbdata.title }}
+            </h3>
+            <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
+            <div class="projectnamebox">
+              <div class="project_explain_text">
+                <p>{{ dbdata.content }}</p>
+              </div>
             </div>
+            <div class="d_t_name2">
+              <p>개발 도구</p>
+              <div class="line3"></div>
+              <img class="image2" :src="dbdata.image2" />
+            </div>
+            <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
           </div>
-          <div class="d_t_name2">
-            <p>개발 도구</p>
-            <div class="line3"></div>
-            <img class="image2" :src="dbdata.image2" />
-          </div>
-          <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
         </div>
       </div>
     </div>
-  </div>
-  <div class="project4">
-    <div class="c_p">
-      <div class="c">
-        <p>완성 프로젝트</p>
+    <div class="project4">
+      <div class="c_p">
+        <div class="c">
+          <p>완성 프로젝트</p>
+        </div>
+        <div class="c_line"></div>
       </div>
-      <div class="c_line"></div>
-    </div>
-    <!-- vue html 반복문 문법 사용 -->
-    <!-- value: menu의 각 원소를 가져옴 , index: 0부터 1씩 증가하는 정수  :key=횟수 가 들어가는것이 일반적임 -->
-    <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
+      <!-- vue html 반복문 문법 사용 -->
+      <!-- value: menu의 각 원소를 가져옴 , index: 0부터 1씩 증가하는 정수  :key=횟수 가 들어가는것이 일반적임 -->
+      <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
 
-    <div v-for="(dbdata2, index) in dbdata2" :key="index">
-      <div class="projectbox" style="float: left">
-        <div class="project_name">
-          <img class="image" :src="dbdata2.image" />
-          <h3 class="project_name_text" :style="atr" @click="view = ture">
-            프로젝트 명: {{ dbdata2.title }}
-          </h3>
-          <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
-          <div class="projectnamebox">
-            <div class="project_explain_text">
-              <p>{{ dbdata2.content }}</p>
+      <div v-for="(dbdata2, index) in dbdata2" :key="index">
+        <div class="projectbox" style="float: left">
+          <div class="project_name">
+            <img class="image" :src="dbdata2.image" />
+            <h3 class="project_name_text" :style="atr" @click="view = ture">
+              프로젝트 명: {{ dbdata2.title }}
+            </h3>
+            <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
+            <div class="projectnamebox">
+              <div class="project_explain_text">
+                <p>{{ dbdata2.content }}</p>
+              </div>
             </div>
+            <div class="d_t_name2">
+              <p>개발 도구</p>
+              <div class="line3"></div>
+              <img class="image2" :src="dbdata2.image2" />
+            </div>
+            <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
           </div>
-          <div class="d_t_name2">
-            <p>개발 도구</p>
-            <div class="line3"></div>
-            <img class="image2" :src="dbdata2.image2" />
-          </div>
-          <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="project5">
-    <div class="r_p">
-      <div class="r">
-        <p>계획중인 프로젝트</p>
+    <div class="project5">
+      <div class="r_p">
+        <div class="r">
+          <p>계획중인 프로젝트</p>
+        </div>
+        <div class="r_line"></div>
       </div>
-      <div class="r_line"></div>
-    </div>
-    <!-- vue html 반복문 문법 사용 -->
-    <!-- value: menu의 각 원소를 가져옴 , index: 0부터 1씩 증가하는 정수  :key=횟수 가 들어가는것이 일반적임 -->
-    <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
+      <!-- vue html 반복문 문법 사용 -->
+      <!-- value: menu의 각 원소를 가져옴 , index: 0부터 1씩 증가하는 정수  :key=횟수 가 들어가는것이 일반적임 -->
+      <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
 
-    <div v-for="(dbdata3, index) in dbdata3" :key="index">
-      <div class="projectbox" style="float: left">
-        <div class="project_name">
-          <img class="image" :src="dbdata3.image" />
-          <h3 class="project_name_text" :style="atr" @click="view = ture">
-            프로젝트 명: {{ dbdata3.title }}
-          </h3>
-          <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
-          <div class="projectnamebox">
-            <div class="project_explain_text">
-              <p>{{ dbdata3.content }}</p>
+      <div v-for="(dbdata3, index) in dbdata3" :key="index">
+        <div class="projectbox" style="float: left">
+          <div class="project_name">
+            <img class="image" :src="dbdata3.image" />
+            <h3 class="project_name_text" :style="atr" @click="view = ture">
+              프로젝트 명: {{ dbdata3.title }}
+            </h3>
+            <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
+            <div class="projectnamebox">
+              <div class="project_explain_text">
+                <p>{{ dbdata3.content }}</p>
+              </div>
             </div>
+            <div class="d_t_name2">
+              <p>개발 도구</p>
+              <div class="line3"></div>
+              <img class="image2" :src="dbdata3.image2" />
+            </div>
+            <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
           </div>
-          <div class="d_t_name2">
-            <p>개발 도구</p>
-            <div class="line3"></div>
-            <img class="image2" :src="dbdata3.image2" />
-          </div>
-          <!-- {{ 오브젝트 키 }} 형식으로 데이터 주입-->
         </div>
       </div>
     </div>
@@ -346,6 +347,13 @@
   transition: all 1s;
   transition-timing-function: ease;
 }
+.all_project {
+  position: relative;
+  width: 1440px;
+  height: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .project3 {
   position: relative;
   width: 1440px;
@@ -496,7 +504,174 @@
   left: 5%;
   top: 120%;
 }
+@media (max-width: 1200px) {
+  .project_1 {
+    display: none;
+  }
+  .project3 {
+    position: relative;
+    width: 768px;
+    height: 520px;
+    left: 50%;
+    transform: translateX(-48%);
+  }
+  .projectbox {
+    background-color: white;
+    position: relative;
+    width: 250px;
+    height: 420px;
+    left: 0%;
+  }
 
+  .n_p {
+    position: relative;
+    width: 950px;
+    height: 70px;
+    left: 0%;
+  }
+  .n {
+    position: absolute;
+    top: 0%;
+    left: 3%;
+    font-size: xx-large;
+  }
+  .n_line {
+    position: absolute;
+    width: 750px;
+    height: 1px;
+    background-color: #cccccc;
+    top: 70%;
+    left: 0%;
+  }
+
+  .project4 {
+    position: relative;
+    width: 768px;
+    height: 520px;
+    left: 50%;
+    transform: translateX(-48%);
+  }
+  .c_p {
+    position: relative;
+    width: 950px;
+    height: 70px;
+    left: 0%;
+  }
+  .c_p {
+    position: relative;
+    width: 950px;
+    height: 70px;
+    left: 0%;
+  }
+  .c {
+    position: absolute;
+    top: 0%;
+    left: 3%;
+    font-size: xx-large;
+  }
+  .c_line {
+    position: absolute;
+    width: 750px;
+    height: 1px;
+    background-color: #cccccc;
+    top: 70%;
+    left: 0%;
+  }
+
+  .project5 {
+    position: relative;
+    width: 768px;
+    height: 520px;
+    left: 50%;
+    transform: translateX(-48%);
+  }
+  .r_p {
+    position: relative;
+    width: 1440px;
+    height: 70px;
+  }
+  .r_p {
+    position: relative;
+    width: 950px;
+    height: 70px;
+    left: 0%;
+  }
+  .r {
+    position: absolute;
+    top: 0%;
+    left: 3%;
+    font-size: xx-large;
+  }
+  .r_line {
+    position: absolute;
+    width: 750px;
+    height: 1px;
+    background-color: #cccccc;
+    top: 70%;
+    left: 0%;
+  }
+
+  .project_name {
+    background-color: aliceblue;
+    width: 240px;
+    height: 400px;
+    position: absolute;
+  }
+
+  .program_name a {
+    padding: 20px;
+  }
+
+  .image {
+    position: absolute;
+    width: 240px;
+    height: 200px;
+    left: 0%;
+    top: 0%;
+  }
+  .project_name_text {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    font-size: 20px;
+  }
+
+  .project_explain_text {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    font-size: 15px;
+  }
+  .d_t_name2 {
+    position: absolute;
+    left: 4%;
+    top: 80%;
+    font-size: 20px;
+  }
+  .line3 {
+    position: absolute;
+    width: 220px;
+    height: 1px;
+    border-top: 1.33px solid #cccccc;
+    left: 3%;
+    top: 70%;
+  }
+  .projectnamebox {
+    position: absolute;
+    width: 240px;
+    height: 90px;
+    top: 57%;
+    left: 0%;
+    background-color: rgb(252, 252, 250);
+  }
+  .image2 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 5%;
+    top: 86%;
+  }
+}
 @media (max-width: 426px) {
   .project_1 {
     display: none;
@@ -652,6 +827,178 @@
     position: absolute;
     z-index: 1;
     width: 150px;
+    height: 1px;
+    border-top: 1.33px solid #cccccc;
+    left: 3%;
+    top: 50%;
+  }
+
+  .image2 {
+    position: absolute;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    left: 5%;
+    top: 63%;
+  }
+}
+@media (max-width: 400px) {
+  .project_1 {
+    display: none;
+  }
+  .project_2 {
+    display: none;
+  }
+  .mobile_banner {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    background-image: "@/assets/banner/project/3d.jpg";
+  }
+  .project3 {
+    position: relative;
+    width: 320px;
+    height: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .n_p {
+    position: relative;
+    width: 380px;
+    height: 40px;
+  }
+  .n {
+    position: absolute;
+    top: 0%;
+    left: 6%;
+    font-size: large;
+  }
+  .n_line {
+    position: absolute;
+    width: 310px;
+    height: 1px;
+    background-color: #cccccc;
+    top: 70%;
+    left: 4%;
+  }
+
+  .project4 {
+    position: relative;
+    width: 320px;
+    height: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .c_p {
+    position: relative;
+    width: 380px;
+    height: 40px;
+  }
+  .c {
+    position: absolute;
+    top: 0%;
+    left: 6%;
+    font-size: large;
+  }
+  .c_line {
+    position: absolute;
+    width: 310px;
+    height: 1px;
+    background-color: #cccccc;
+    top: 70%;
+    left: 4%;
+  }
+
+  .project5 {
+    position: relative;
+    width: 320px;
+    height: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .r_p {
+    position: relative;
+    width: 380px;
+    height: 40px;
+  }
+  .r {
+    position: absolute;
+    top: 0%;
+    left: 6%;
+    font-size: large;
+  }
+  .r_line {
+    position: absolute;
+    width: 310px;
+    height: 1px;
+    background-color: #cccccc;
+    top: 70%;
+    left: 4%;
+  }
+
+  .projectbox {
+    background-color: white;
+    position: relative;
+    width: 150px;
+    height: 230px;
+    left: 4%;
+  }
+
+  .project_name {
+    background-color: aliceblue;
+    width: 145px;
+    height: 220px;
+    position: absolute;
+  }
+
+  .program_name a {
+    padding: 20px;
+  }
+
+  .image {
+    position: absolute;
+    width: 145px;
+    height: 80px;
+    left: 0%;
+    top: 0%;
+  }
+  .project_name_text {
+    position: absolute;
+    z-index: 1;
+    top: 38.3%;
+    left: 3%;
+    font-size: 10px;
+  }
+  .projectnamebox {
+    position: absolute;
+    z-index: 2;
+    width: 145px;
+    height: 70px;
+    top: 45%;
+    left: 0%;
+    background-color: rgb(252, 252, 250);
+  }
+
+  .project_explain_text {
+    position: absolute;
+    top: 3.5%;
+    left: 3%;
+    font-size: 4px;
+  }
+  .d_t_name2 {
+    position: absolute;
+    z-index: 1;
+    left: 4%;
+    top: 78%;
+    font-size: 5px;
+  }
+  .line3 {
+    position: absolute;
+    z-index: 1;
+    width: 120px;
     height: 1px;
     border-top: 1.33px solid #cccccc;
     left: 3%;
