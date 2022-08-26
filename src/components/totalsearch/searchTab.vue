@@ -57,16 +57,17 @@
           <p>{{ list }}</p>
         </div>
       </div>
-      <p class="resort-text">총 <span></span>건이 검색되었습니다</p>
+      <p class="resort-text">
+        총 <span>{{ $store.state.totalSearchResort.element.length }}</span> 건이
+        검색되었습니다
+      </p>
     </div>
   </div>
 </template>
 <script>
-import { useStore } from "vuex";
+import { mapMutations } from "vuex";
 var keyWord = new Set();
-var store;
 export default {
-  setup() {},
   data() {
     return {
       search: {
@@ -84,6 +85,7 @@ export default {
     };
   },
   methods: {
+    ...mapMutations(["totalSearch"]),
     // all 필터 버튼
     allselect() {
       this.search.fillter["all"] = !this.search.fillter["all"];
@@ -114,6 +116,7 @@ export default {
     searching(e) {
       console.log("test32");
       this.search.inputText = this.keywordSeparator(e.target.value);
+      this.totalSearch(this.search);
     },
     keywordSeparator(text) {
       if (text.length == 0) return;
@@ -122,7 +125,9 @@ export default {
       //정규식으로 문자열에서 키워드만 빼기
       var keywordarr = text.match(reg);
       if (keywordarr != null) {
-        keywordarr.forEach((item) => this.search.keyWord.add(item));
+        keywordarr.forEach((item) => {
+          this.search.keyWord.add(item.replace("#", ""));
+        });
         //키워드가 아닌 택스트 return
         text = text.replace(reg, "");
       }
