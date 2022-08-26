@@ -5,6 +5,7 @@ export default [
     image:
       "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA10kYSG.img?h=315&w=600&m=6&q=60&o=t&l=f&f=jpg&x=300&y=99",
     content: "그냥 아무거나 적은 것 제공",
+    tag: "#친구 #사랑 #동료",
   },
   {
     id: 0,

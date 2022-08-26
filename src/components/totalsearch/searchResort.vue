@@ -1,99 +1,5 @@
 <template>
-  <p>this component is search resort</p>
   <div class="whole">
-    <button class="inventory">
-      <svg
-        width="43"
-        height="17"
-        viewBox="0 0 43 17"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.33325 5H13.9999"
-          stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M5.33325 9H13.9999"
-          stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M5.33325 13H13.9999"
-          stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M2 5H2.00667"
-          stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M2 9H2.00667"
-          stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M2 13H2.00667"
-          stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M22.2489 4.472V8.264H29.6529V4.472H22.2489ZM28.4169 5.468V7.268H23.4849V5.468H28.4169ZM21.0009 9.488V10.496H30.9129V9.488H21.0009ZM25.3329 8.024V9.812H26.5809V8.024H25.3329ZM22.1049 11.48V12.476H28.4529V14.996H29.7009V11.48H22.1049ZM32.04 9.992V11H41.976V9.992H32.04ZM33.288 4.28V5.24H39.492V6.164H33.3V8.42H34.548V7.076H40.728V4.28H33.288ZM33.3 8.036V9.008H40.956V8.036H33.3ZM36.384 8.516V10.52H37.632V8.516H36.384ZM33.144 11.744V12.752H39.54V14.924H40.8V11.744H33.144Z"
-          fill="white"
-        />
-      </svg>
-    </button>
-    <button class="grid">
-      <svg
-        width="55"
-        height="17"
-        viewBox="0 0 55 17"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M6.66667 3H2V7.66667H6.66667V3Z"
-          fill="#474D61"
-          stroke="#474D61"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M13.9999 3H9.33325V7.66667H13.9999V3Z"
-          fill="#474D61"
-          stroke="#474D61"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M13.9999 10.3333H9.33325V14.9999H13.9999V10.3333Z"
-          fill="#474D61"
-          stroke="#474D61"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M6.66667 10.3333H2V14.9999H6.66667V10.3333Z"
-          fill="#474D61"
-          stroke="#474D61"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M23.0374 5.12V6.128H30.0454V5.12H23.0374ZM21.9934 12.44V13.472H31.9054V12.44H21.9934ZM29.3734 5.12V6.308C29.3734 7.724 29.3734 9.332 28.9534 11.504L30.2134 11.624C30.6214 9.308 30.6214 7.772 30.6214 6.308V5.12H29.3734ZM40.8205 4.016V15.008H42.0805V4.016H40.8205ZM33.6445 11.372V12.404H34.5805C36.5125 12.404 38.1445 12.332 40.0405 12.008L39.9085 10.988C38.0605 11.3 36.4645 11.372 34.5805 11.372H33.6445ZM33.6205 5V6.02H37.4605V8.06H33.6445V11.756H34.9165V9.068H38.7325V5H33.6205ZM45.2835 9.2V10.208H52.8915V9.2H45.2835ZM44.0715 12.548V13.58H54.0075V12.548H44.0715ZM45.2835 4.988V9.632H46.5315V6.02H52.7955V4.988H45.2835Z"
-          fill="#474D61"
-        />
-      </svg>
-    </button>
-
     <div class="projects">
       <a v-for="(value, index) in menu" :key="index"> {{ value }} </a>
 
@@ -105,13 +11,11 @@
               {{ dbdata.title }}
             </h3>
             <!-- 속성 데이터 바인딩은 속성 앞에 :(콜론을 붙인다.) -->
-            <div v-for="(dbdata2, index) in dbdata2" :key="index">
-              <div class="box">
-                <div class="tag">
-                  <p>#{{ dbdata2.tag }}</p>
-                </div>
-              </div>
+
+            <div class="tag">
+              <p>{{ dbdata.tag }}</p>
             </div>
+
             <div class="project_explain">
               <div class="project_explain_text">
                 <p>{{ dbdata.content }}</p>
@@ -180,9 +84,7 @@
 </template>
 
 <script>
-import aa from "@/components/totalsearch/aa.js";
-import ab from "@/components/totalsearch/ab.js";
-
+import aa from "@/script/search/aa.js";
 // js 데이터를 불러와서 사용할때
 
 //모바일에서 볼 때
@@ -191,24 +93,25 @@ export default {
     //데이터 바인딩 데이터를 사용할때 오브젝트 형식 {} 으로 저장
     return {
       dbdata: aa,
-      dbdata2: ab,
+
       // 데이터 바인딩을 사용하여 데이터를 주입 할 수 있음
       view: false,
       atr: "color : blue", // 속성 또한 바인딩 가능
     };
   },
+
   methods: {
     increase(index) {
       this.num[index]++;
+    },
+    grid() {
+      this.$router.push("totalsearch2");
     },
   },
 };
 </script>
 
 <style scoped>
-p {
-  top: 0px;
-}
 .whole {
   position: relative;
   width: 1440px;
@@ -217,30 +120,12 @@ p {
   transform: translateX(-50%);
 }
 
-.inventory {
-  position: relative;
-  width: 70px;
-  height: 30px;
-  border-radius: 15px;
-  background-color: #474d61;
-  top: -20px;
-  left: 12%;
-}
-.grid {
-  position: absolute;
-  width: 80px;
-  height: 30px;
-  top: -20px;
-  left: 65%;
-  border-radius: 15px;
-}
-
 .projects {
   position: relative;
   width: 1440px;
   height: 1450px;
   left: 50%;
-  top: 7px;
+  top: 28px;
   transform: translateX(-50%);
 }
 .projectbox {
@@ -265,6 +150,7 @@ p {
   height: 150px;
   top: 0px;
   left: 0px;
+  border-radius: 10px;
 }
 .project_name_text {
   position: absolute;
@@ -272,13 +158,7 @@ p {
   left: 27%;
   font-size: 20px;
 }
-.box {
-  position: absolute;
-  border-radius: 14px;
-  stroke: #34364e;
-  top: 0%;
-  left: 0%;
-}
+
 .tag {
   position: absolute;
   font-size: 12px;
@@ -314,6 +194,8 @@ p {
   color: aliceblue;
   background-color: #34364e;
   border-radius: 5px;
+  border: 1px solid #34364e;
+  outline: none;
 }
 .s_bt {
   position: absolute;
@@ -322,7 +204,310 @@ p {
   top: 53%;
   left: 78%;
   color: aliceblue;
-  stroke: #474d61;
+  border: 1px solid #34364e;
   border-radius: 5px;
+  outline: none;
+  font-size: small;
+}
+@media screen and (max-width: 426px) {
+  .whole {
+    position: relative;
+    width: 420px;
+    top: 0px;
+    left: 0%;
+    transform: translateX(47%);
+  }
+
+  .projects {
+    position: relative;
+    width: 410px;
+    height: 1000px;
+    left: 50%;
+    top: 28px;
+    transform: translateX(-50%);
+  }
+  .projectbox {
+    position: relative;
+    width: 410px;
+    height: 105px;
+    top: -21px;
+    left: 10px;
+    transform: translateX(-50%);
+    background-color: aqua;
+  }
+  .project_name {
+    position: absolute;
+    width: 410px;
+    height: 100px;
+    background-color: aliceblue;
+    border-radius: 10px;
+  }
+  .image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px;
+  }
+  .project_name_text {
+    position: absolute;
+    top: 8%;
+    left: 27%;
+    font-size: 15px;
+  }
+
+  .tag {
+    position: absolute;
+    font-size: 5px;
+    width: auto;
+    height: auto;
+    top: 23%;
+    left: 27%;
+    padding: 5px;
+  }
+
+  .project_explain {
+    position: absolute;
+    width: 180px;
+    height: 43px;
+    background-color: aquamarine;
+    top: 52%;
+    left: 27%;
+    text-align: left;
+  }
+  .project_explain_text {
+    position: absolute;
+    text-align: left;
+    top: 2px;
+    left: 2px;
+    font-size: 10px;
+  }
+  .g_bt {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    top: 6%;
+    left: 74%;
+    color: aliceblue;
+    background-color: #34364e;
+    border-radius: 5px;
+    border: 1px solid #34364e;
+    outline: none;
+    font-size: 5px;
+  }
+  .s_bt {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    top: 53%;
+    left: 74%;
+    color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid #34364e;
+    outline: none;
+    font-size: 5px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .whole {
+    position: relative;
+    width: 375px;
+    top: 0px;
+    left: 0%;
+    transform: translateX(47%);
+  }
+
+  .projects {
+    position: relative;
+    width: 360px;
+    height: 1000px;
+    left: 50%;
+    top: 28px;
+    transform: translateX(-50%);
+  }
+  .projectbox {
+    position: relative;
+    width: 360px;
+    height: 100px;
+    top: -21px;
+    left: 10px;
+    transform: translateX(-50%);
+    background-color: aqua;
+  }
+  .project_name {
+    position: absolute;
+    width: 360px;
+    height: 95px;
+    background-color: aliceblue;
+    border-radius: 10px;
+  }
+  .image {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px;
+  }
+  .project_name_text {
+    position: absolute;
+    top: 8%;
+    left: 27%;
+    font-size: 15px;
+  }
+
+  .tag {
+    position: absolute;
+    font-size: 5px;
+    width: auto;
+    height: auto;
+    top: 23%;
+    left: 27%;
+    padding: 5px;
+  }
+
+  .project_explain {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    background-color: aquamarine;
+    top: 52%;
+    left: 27%;
+    text-align: left;
+  }
+  .project_explain_text {
+    position: absolute;
+    text-align: left;
+    top: 2px;
+    left: 2px;
+    font-size: 10px;
+  }
+  .g_bt {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    top: 6%;
+    left: 73%;
+    color: aliceblue;
+    background-color: #34364e;
+    border-radius: 5px;
+    border: 1px solid #34364e;
+    outline: none;
+    font-size: 5px;
+  }
+  .s_bt {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    top: 53%;
+    left: 73%;
+    color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid #34364e;
+    outline: none;
+    font-size: 5px;
+  }
+}
+
+@media screen and (width: 320px) {
+  .whole {
+    position: relative;
+    width: 310px;
+    top: 0px;
+    left: 0%;
+    transform: translateX(46.5%);
+  }
+
+  .projects {
+    position: relative;
+    width: 300px;
+    height: 800px;
+    left: 50%;
+    top: 28px;
+    transform: translateX(-50%);
+  }
+  .projectbox {
+    position: relative;
+    width: 300px;
+    height: 80px;
+    top: -21px;
+    left: 10px;
+    transform: translateX(-50%);
+    background-color: aqua;
+  }
+  .project_name {
+    position: absolute;
+    width: 300px;
+    height: 75px;
+    background-color: aliceblue;
+    border-radius: 10px;
+  }
+  .image {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px;
+  }
+  .project_name_text {
+    position: absolute;
+    top: 8%;
+    left: 27%;
+    font-size: 10px;
+  }
+
+  .tag {
+    position: absolute;
+    font-size: 5px;
+    width: auto;
+    height: auto;
+    top: 20%;
+    left: 27%;
+    padding: 5px;
+  }
+
+  .project_explain {
+    position: absolute;
+    width: 130px;
+    height: 30px;
+    background-color: aquamarine;
+    top: 55%;
+    left: 27%;
+    text-align: left;
+  }
+  .project_explain_text {
+    position: absolute;
+    text-align: left;
+    top: 2px;
+    left: 2px;
+    font-size: 7px;
+  }
+  .g_bt {
+    position: absolute;
+    width: 74px;
+    height: 30px;
+    top: 6%;
+    left: 74%;
+    color: aliceblue;
+    background-color: #34364e;
+    border-radius: 5px;
+    border: 1px solid #34364e;
+    outline: none;
+    font-size: 5px;
+  }
+  .s_bt {
+    position: absolute;
+    width: 74px;
+    height: 30px;
+    top: 53%;
+    left: 74%;
+    color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid #34364e;
+    outline: none;
+    font-size: 5px;
+  }
 }
 </style>

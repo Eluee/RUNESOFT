@@ -47,8 +47,16 @@ export default createStore({
       element: [],
       keyWord: [],
     },
+    totalSearchClick: {
+      click: false,
+    },
   },
-  getters: {},
+  getters: {
+    test: (state) => {
+      state.totalSearchClick.click = !state.totalSearchClick.click;
+      console.log(state.totalSearchClick.click);
+    },
+  },
   mutations: {
     totalSearch: (state, payload) => {
       var reg = new RegExp(`${payload.inputText}`);
