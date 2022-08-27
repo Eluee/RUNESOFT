@@ -10,21 +10,27 @@
       <div class="fillter-ct">
         <button
           class="fillter-icon"
-          :class="{ 'fillter-selected': search.fillter.notice }"
+          :class="{
+            'fillter-selected': $store.state.totalSearchResort.fillter.notice,
+          }"
           v-on:click="fillterselect('notice')"
         >
           <p>공지사항</p>
         </button>
         <button
           class="fillter-icon"
-          :class="{ 'fillter-selected': search.fillter.project }"
+          :class="{
+            'fillter-selected': $store.state.totalSearchResort.fillter.project,
+          }"
           v-on:click="fillterselect('project')"
         >
           <p>프로젝트</p>
         </button>
         <button
           class="fillter-icon"
-          :class="{ 'fillter-selected': search.fillter.all }"
+          :class="{
+            'fillter-selected': $store.state.totalSearchResort.fillter.all,
+          }"
           v-on:click="allselect()"
         >
           <svg
@@ -41,7 +47,10 @@
               stroke-linecap="round"
               stroke-linejoin="round"
               class="fillter-svg"
-              :class="{ 'fillter-svg-selected': search.fillter.all }"
+              :class="{
+                'fillter-svg-selected':
+                  $store.state.totalSearchResort.fillter.all,
+              }"
             />
           </svg>
           <p>전체</p>
@@ -85,33 +94,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(["totalSearch"]),
-    // all 필터 버튼
-    allselect() {
-      this.search.fillter["all"] = !this.search.fillter["all"];
-      for (var key in this.search.fillter) {
-        this.search.fillter[key] = this.search.fillter["all"];
-      }
-    },
-    // 필터 선택 버튼
-    fillterselect(key) {
-      if (this.search.fillter[key]) {
-        this.search.fillter[key] = false;
-        this.search.fillter["all"] = false;
-      } else {
-        this.search.fillter[key] = true;
-        this.examineallselect();
-      }
-    },
-    examineallselect() {
-      var fillterflag = true;
-      for (var key in this.search.fillter) {
-        if (key != "all") {
-          fillterflag = this.search.fillter[key] && fillterflag;
-        }
-      }
-      this.search.fillter["all"] = fillterflag;
-    },
+    ...mapMutations(["totalSearch", "allselect", "fillterselect"]),
     // 매개변수가 e로 설정되어있고 넘겨준것도 없지만 e에 접근이 가능하다...
     searching(e) {
       console.log("test32");

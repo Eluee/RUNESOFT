@@ -44,8 +44,13 @@ export default createStore({
     },
     totalSearchResort: {
       inputText: "",
-      element: [],
       keyWord: [],
+      element: [],
+      fillter: {
+        all: true,
+        project: true,
+        notice: true,
+      },
     },
     totalSearchClick: {
       click: false,
@@ -70,20 +75,50 @@ export default createStore({
         state.allData[category].forEach((item) => {
           if (item.title.search(reg) != -1 && payload.inputText != "") {
             state.totalSearchResort.element.push(item);
-          } else if (payload.keyWord.size > 0) {
-            item.keyWord.forEach((i) => {
-              console.log(payload.keyWord.has(i));
-              if (payload.keyWord.has(i)) {
-                state.totalSearchResort.element.push(item);
-                //한번이라도 조건을 충족하면 반복문 탈출
-                return false;
-              }
-            });
+          } else if (isSuperset(payload.keyWord, item.keyWord)) {
+            state.totalSearchResort.element.push(item);
           }
         });
       }
-      for (var a = 0; a < state.totalSearchResort.keyWord.length; a++) {
-        console.log(state.totalSearchResort.keyWord[a]);
+      for (var a = 0; a < state.totalSearchResort.element.length; a++) {
+        console.log(state.totalSearchResort.element[a].title);
+      }
+      // 교집합이 있을경우
+      function isSuperset(keyWordset, list) {
+        for (var i in list) {
+          console.log(i + " " + list[i]);
+          if (keyWordset.has(list[i])) {
+            return true;
+          }
+        }
+        return false;
+      }
+    },
+    allselect: (state) => {
+      console.log("allselect");
+      state.totalSearchResort.fillter["all"] =
+        !state.totalSearchResort.fillter["all"];
+      for (var key in state.totalSearchResort.fillter) {
+        state.totalSearchResort.fillter[key] =
+          state.totalSearchResort.fillter["all"];
+      }
+    },
+    fillterselect: (state, key) => {
+      if (state.totalSearchResort.fillter[key]) {
+        state.totalSearchResort.fillter[key] = false;
+        state.totalSearchResort.fillter["all"] = false;
+      } else {
+        state.totalSearchResort.fillter[key] = true;
+        examineallselect();
+      }
+      function examineallselect() {
+        var fillterflag = true;
+        for (var key in state.totalSearchResort.fillter) {
+          if (key != "all") {
+            fillterflag = state.totalSearchResort.fillter[key] && fillterflag;
+          }
+        }
+        state.totalSearchResort.fillter["all"] = fillterflag;
       }
     },
   },
