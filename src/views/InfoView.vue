@@ -1,17 +1,17 @@
 <template>
   <div class="topBanner">
     <ul class="wrap-values">
-      <li class="value">
-        <img src="@/assets/info/value1.jpg" />
+      <li class="dev-profile">
+        <img src="@/assets/info/JSH_profile1.jpg" />
       </li>
-      <li class="value">
-        <img src="@/assets/info/value2.jpg" />
+      <li class="dev-profile">
+        <img src="@/assets/info/KTH_profile1.jpg" />
       </li>
-      <li class="value">
-        <img src="@/assets/info/value3.jpg" />
+      <li class="dev-profile">
+        <img src="@/assets/info/LBJ_profile1.jpg" />
       </li>
-      <li class="value">
-        <img src="@/assets/info/value4.jpg" />
+      <li class="dev-profile">
+        <img src="@/assets/info/new_dev_profile.png" />
       </li>
     </ul>
   </div>
@@ -187,7 +187,7 @@
           <template #profileImg>
             <img
               class="profile-img-size"
-              src="@/assets/info/JeongSeongHwa.png"
+              src="@/assets/info/JSH_profile2.png"
             />
           </template>
           <template #profileName>
@@ -217,7 +217,7 @@
           <template #profileImg>
             <img
               class="profile-img-size"
-              src="@/assets/info/LeeByeongJun.png"
+              src="@/assets/info/LBJ_profile2.png"
             />
           </template>
           <template #profileName>
@@ -246,7 +246,10 @@
       <div class="wrap-devTalkBox">
         <talkBoxLeft>
           <template #profileImg>
-            <img class="profile-img-size" src="@/assets/info/KimTaeHo.png" />
+            <img
+              class="profile-img-size"
+              src="@/assets/info/KTH_profile2.png"
+            />
           </template>
           <template #profileName>
             <span class="profileNameLeft">김태호</span>
@@ -285,11 +288,12 @@
 
   justify-content: center;
 }
-.value img {
+.dev-profile img {
+  width: 320px;
   filter: grayscale(100%);
   transition: 0.25s;
 }
-.value img:hover {
+.dev-profile img:hover {
   filter: grayscale(0%);
 }
 .mainBanner {
@@ -369,6 +373,9 @@
   width: 100%;
   margin-top: 5%;
 }
+.profile-img-size {
+  width: 70px;
+}
 .profileNameLeft {
   float: left;
   color: #fff;
@@ -379,13 +386,13 @@
 }
 .devTxtLeft {
   color: #3d3d3d;
-  font-weight: 600;
+  font-weight: 500;
   text-align: left;
   word-break: keep-all;
 }
 .devTxtRight {
   color: #e7e4e2;
-  font-weight: 600;
+  font-weight: 500;
   text-align: left;
   word-break: keep-all;
 }
@@ -393,18 +400,18 @@
   color: #d9d9d9;
   text-decoration: none;
   margin-left: 10px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .gitAccountRight {
   color: #472923;
   text-decoration: none;
   margin-left: 10px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /*960px 이하*/
 @media screen and (max-width: 960px) {
-  .value img {
+  .dev-profile img {
     width: 100%;
   }
   .contents {
@@ -426,7 +433,7 @@
     width: 100%;
     flex-wrap: wrap;
   }
-  .value {
+  .dev-profile {
     width: 50%;
   }
   .profile-img-size {
@@ -446,7 +453,7 @@
 
 /*480px 이하*/
 @media screen and (max-width: 480px) {
-  .value {
+  .dev-profile {
     width: 100%;
   }
 }
