@@ -42,10 +42,13 @@ export default createStore({
         },
       ],
     },
+    // element에 들어간 객체에 분류 태그 하나 넣기
     totalSearchResort: {
       inputText: "",
       keyWord: [],
       element: [],
+      // filltering값을 기반으로 element 개수의
+      fillteringResort: 0,
       fillter: {
         all: true,
         project: true,
@@ -70,23 +73,32 @@ export default createStore({
       state.totalSearchResort.keyWord = Array.from(payload.keyWord);
       state.totalSearchResort.inputText = payload.inputText;
       state.totalSearchResort.element = [];
+      state.totalSearchResort.fillteringResort = 0;
       //데이터 탐색
       for (var category in state.allData) {
         state.allData[category].forEach((item) => {
           if (item.title.search(reg) != -1 && payload.inputText != "") {
+            item.class = category;
             state.totalSearchResort.element.push(item);
           } else if (isSuperset(payload.keyWord, item.keyWord)) {
+            item.class = category;
             state.totalSearchResort.element.push(item);
           }
         });
       }
       for (var a = 0; a < state.totalSearchResort.element.length; a++) {
-        console.log(state.totalSearchResort.element[a].title);
+        if (
+          state.totalSearchResort.fillter[
+            state.totalSearchResort.element[a].class
+          ]
+        ) {
+          state.totalSearchResort.fillteringResort++;
+        }
       }
+      console.log(state.totalSearchResort.fillteringResort);
       // 교집합이 있을경우
       function isSuperset(keyWordset, list) {
         for (var i in list) {
-          console.log(i + " " + list[i]);
           if (keyWordset.has(list[i])) {
             return true;
           }

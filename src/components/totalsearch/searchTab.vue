@@ -67,7 +67,8 @@
         </div>
       </div>
       <p class="resort-text">
-        총 <span>{{ $store.state.totalSearchResort.element.length }}</span> 건이
+        총
+        <span>{{ $store.state.totalSearchResort.fillteringResort }}</span> 건이
         검색되었습니다
       </p>
     </div>
