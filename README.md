@@ -1,4 +1,5 @@
-# runesoft
+# runesoft 메인 웹페이지
+RUNESOFT의 메인 웹페이지 작업물입니다.
 
 ## Project setup
 ```
